@@ -1,0 +1,60 @@
+---
+layout: none
+permalink: /keybase.txt
+---
+
+==================================================================
+https://keybase.io/alter2000
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://alter2000.github.io
+  * I am alter2000 (https://keybase.io/alter2000) on keybase.
+  * I have a public key ASAvdypndDLWM4y99026w18VXbwqq2qjbUmrmFfuSWeEFwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01202f772a677432d6338cbdf74dbac35f155dbc2aab6aa36d49ab9857ee496784170a",
+      "host": "keybase.io",
+      "kid": "01202f772a677432d6338cbdf74dbac35f155dbc2aab6aa36d49ab9857ee496784170a",
+      "uid": "0614ce8fef4d19169547dfed21423419",
+      "username": "alter2000"
+    },
+    "merkle_root": {
+      "ctime": 1511983186,
+      "hash": "b490150bf17a22c67138f165aa3c5a4760faed0b7f9bafe7bf8efd94e8b8b3b1b35bcdf738b54b5503cf5379dfea0a212b870d7b8b3240afaee9ac15aa6f3005",
+      "hash_meta": "9daf8757be7db4ad5e9be98060db8d4ba715423a129bcce9b941c2f966752f0f",
+      "seqno": 1763040
+    },
+    "service": {
+      "hostname": "alter2000.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.36"
+  },
+  "ctime": 1511983204,
+  "expire_in": 504576000,
+  "prev": "f2bde018f07238720d93578060e1e30a71bd38317861e401295810f397636604",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgL3cqZ3Qy1jOMvfdNusNfFV28Kqtqo21Jq5hX7klnhBcKp3BheWxvYWTFA0x7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMmY3NzJhNjc3NDMyZDYzMzhjYmRmNzRkYmFjMzVmMTU1ZGJjMmFhYjZhYTM2ZDQ5YWI5ODU3ZWU0OTY3ODQxNzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMmY3NzJhNjc3NDMyZDYzMzhjYmRmNzRkYmFjMzVmMTU1ZGJjMmFhYjZhYTM2ZDQ5YWI5ODU3ZWU0OTY3ODQxNzBhIiwidWlkIjoiMDYxNGNlOGZlZjRkMTkxNjk1NDdkZmVkMjE0MjM0MTkiLCJ1c2VybmFtZSI6ImFsdGVyMjAwMCJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUxMTk4MzE4NiwiaGFzaCI6ImI0OTAxNTBiZjE3YTIyYzY3MTM4ZjE2NWFhM2M1YTQ3NjBmYWVkMGI3ZjliYWZlN2JmOGVmZDk0ZThiOGIzYjFiMzViY2RmNzM4YjU0YjU1MDNjZjUzNzlkZmVhMGEyMTJiODcwZDdiOGIzMjQwYWZhZWU5YWMxNWFhNmYzMDA1IiwiaGFzaF9tZXRhIjoiOWRhZjg3NTdiZTdkYjRhZDVlOWJlOTgwNjBkYjhkNGJhNzE1NDIzYTEyOWJjY2U5Yjk0MWMyZjk2Njc1MmYwZiIsInNlcW5vIjoxNzYzMDQwfSwic2VydmljZSI6eyJob3N0bmFtZSI6ImFsdGVyMjAwMC5naXRodWIuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4zNiJ9LCJjdGltZSI6MTUxMTk4MzIwNCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiJmMmJkZTAxOGYwNzIzODcyMGQ5MzU3ODA2MGUxZTMwYTcxYmQzODMxNzg2MWU0MDEyOTU4MTBmMzk3NjM2NjA0Iiwic2Vxbm8iOjcsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAq+uSxF0Z7Poa8IBI6o2THm8N4ijWaOQhalbrRvGLzjdOhb7AJzSeKfVNGbXmYQZi9t+Rfz9PruQO5mZhx7GvBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIASAYX8qWdD5LuzfUcyNrTSaH/EcqxBroYNy8tmerRSGo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/alter2000
+
+==================================================================

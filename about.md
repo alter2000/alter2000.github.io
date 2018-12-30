@@ -1,18 +1,15 @@
 ---
-layout: page
-title: About
+layout: splash
 permalink: /about/
+title: "The Plot"
+excerpt: "YAAP - Yet another About page"
+header:
+  overlay_image: "/assets/img/about_splash.jpg"
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I'm a tinkerer, FOSS enthusiast, DIY-er. I'm smitten with tiling WMs, rolling GNU/Linux distributions and food.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+This site is hosted on [Github Pages](https://pages.github.com/) and
+[Jekyll](https://jekyllrb.com). I'll eventually self-host with my own domain,
+mail server and everything, but for now let's keep expenses to a minimum.
+Expect tutorials and don't hesitate to ask any kind of relevant questions®.
