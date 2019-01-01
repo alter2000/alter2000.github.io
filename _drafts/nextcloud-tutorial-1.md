@@ -1,9 +1,9 @@
 ---
 layout: single
-title: "Nextcloud - server setup"
+title: Nextcloud - server setup
 date: 2017-09-10 17:00
 categories: tutorials
-excerpt: "Step by step clickthrough"
+excerpt: Step by step clickthrough
 ---
 
 Here's the first part of the tutorial. Since many people I've recommended
