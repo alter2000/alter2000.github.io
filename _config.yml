@@ -16,12 +16,16 @@ lsi: true
 excerpt_separator: "\n\n---\n\n"
 incremental: false
 markdown: kramdown
-theme: minima
 safe: true
 plugins:
   - jekyll-feed
-permalink: "/:categories/:short_year/:month/:title/"
+permalink: "/:categories/:short_year/:title/"
+paginate: 6
+paginate_path: "/:num"
 
+# Sass settings
+sass:
+  style: compressed
 # Liquid settings
 error_mode: strict
 strict_filters: true
@@ -48,9 +52,8 @@ defaults:
     values:
       layout: single
       read_time: true
-      author_profile: true
-      share: true
-      related: true
+      sidebar:
+        nav: left-sidebar
   # archive layouts
   - scope:
       path: ""
@@ -58,4 +61,5 @@ defaults:
     values:
       layout: single
       toc: true
-      author_profile: true
+      sidebar:
+        nav: left-sidebar
