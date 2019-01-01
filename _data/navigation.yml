@@ -1,7 +1,8 @@
 ---
-- name: Home
-  link: /
-- name: About
-  link: /about/
-- name: XP
-  link: /portfolio/
+links:
+  - name: Home
+    url: /
+  - name: About
+    url: /about/
+  - name: XP
+    url: /portfolio/
