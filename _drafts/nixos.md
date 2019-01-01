@@ -1,0 +1,67 @@
+# NixOS
+
+Cool little thing, this distro. It's like you're baking a bootable ISO every
+time you upgrade, but other than that, it's awesome. Maybe even the upgrade
+part is doing me a favor: Arch updates are more of a `moon-buggy`-esque pastime
+than system-wide changes. Maybe I needed a switch. Anyhow, these months after
+school I decided to go (almost) full NixOS. The VM worked fine, the 32 bit
+build didn't, so I couldn't test it on my old laptop. Still, the fact that such
+an "underground" (not my words) distribution actually has 32 bit builds
+surprised me.
+
+Something with compiling Firefox's Spidermonkey and then something about not
+having enough memory (swap enabled) for the nix daemon during big package
+compilations, [which seems to be on the works for the next release], prevented
+me from doing proper performance testing, as is custom for 2006-era laptops.
+I then overwrote the whole Arch partition and the install went quite smoothly
+(maybe the lack of LVM/LUKS helped, maybe not).
+
+The first cool thing about NixOS is the configuration file: every difference in
+the system is defined on a single file, every package, every different compile
+option, every running service, every partition, bootloader and kernel option.
+From there, the Nix package manager also packages the configuration files for
+all other programs in a separate "package" (these are called derivations and
+have a .drv extension). After editing the configuration file, all you need to
+do is run `nixos-rebuild switch [--upgrade]` and all changes will take effect
+either immediately or after a reboot (say, bootloader configs), after updating
+all non-fixed packages (you can specify which package versions you want and
+this is perfect for production machines and multiuser systems, where some users
+might need different software versions).
+
+The second (and most important) cool thing one will notice is the nix language.
+Every built package has been created following the same declarative language,
+including the system configuration (`/etc/nixos/configuration.nix`) and the
+per-user configurations (via [`home-manager`]). I wanted to get my toes wet
+with Haskell when it comes to functional programming, but it seems I had to
+learn some in order to user NixOS.
+
+Third, this kind of specification allows for scary orchestration and
+customization. Ansible, Saltstack and the like all go out the window, as the
+system just *is*, there is no point in using imperative forms and shuffling
+files in various locations (although there is a way to order a package
+install). Entire folders of shell scripts and Makefiles can be safely thrown
+out, since one could just edit either the expression directly from the store,
+or add/customize an attribute/option via `packageOverrides`. We have to come
+back to the previous part of system rewrites and point out that the /etc folder
+is also often nuked (especially boot files). If you want to keep
+a configuration, store it in /etc/static and symlink to the proper place **in
+/etc only**. The filesystem tree is very different: each package is stored in
+/nix/store/<hash>-<package name> and the respective derivation has a .drv at
+the end. This also means that inside each package there might be a bunch of
+./lib or ./usr subdirectories with documentation and service files and whatnot
+
+Nix, on the other hand, is a different beast. It not only expects to be the
+only package manager in the system in the case of NixOS, but actually enforces
+this (installing Python packages via `pip` or gems via `gem` is pointless as
+you won't be able to run them without much hassle). On the other hand, it can
+also coexist with other package managers, say DNF or APT, if installed on
+a distro different from NixOS. It can also change that distro *into* NixOS if
+you want. All this seemingly pointless fluff, although quite useful for quick
+migrations, requires Nix to take a different approach to packaging: if
+a derivation identifiable by its hash isn't found on the public cache
+(something like a big public repo), then it is *transparently* built following
+the appropriate nix expression. This makes Nix something between Arch's ABS/AUR
+and Gentoo's (together with all the BSDs) port(age) trees, but *betterer*.
+
+I've tried to write an expression for [terminal_velocity], but it seems I'm in
+too deep and will have a go with user environments instead.
