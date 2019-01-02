@@ -19,6 +19,7 @@ markdown: kramdown
 safe: true
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 permalink: "/:categories/:short_year/:title/"
 paginate: 6
 paginate_path: "/:num"
@@ -30,6 +31,10 @@ sass:
 error_mode: strict
 strict_filters: true
 strict_variables: true
+
+collections:
+  talks:
+    pandoc: true
 
 include:
   - .htaccess
@@ -45,15 +50,20 @@ exclude:
   - vendor
 
 defaults:
-  # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
-      layout: single
+      layout: post
       read_time: true
       sidebar:
         nav: left-sidebar
+  - scope:
+      path: "_talks"
+      type: posts
+    values:
+      layout: slides
+      read_time: false
   # archive layouts
   - scope:
       path: ""

@@ -18,7 +18,7 @@
 
         <div class="trigger">
           {%- for item in site.data.navigation.links -%}
-            <a {% if item.url == page.url %}class="sidebar-active"{% endif %} href="{{ item.url }}">{{ item.name }}</a>
+            <a class="nav{% if item.url == page.url %} nav-active{% endif %}" href="{{ item.url }}">{{ item.name }}</a>
           {%- endfor -%}
         </div>
       </nav>

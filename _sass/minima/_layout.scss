@@ -28,8 +28,16 @@
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
 
+  .nav {
+    padding-right: 20px;
+  }
+
+  .nav-active {
+    color: $brand-color;
+  }
+
   .nav-trigger {
-      display: none;
+    display: none;
   }
 
   .menu-icon {
@@ -100,8 +108,6 @@
   }
 }
 
-
-
 /**
  * Site footer
  */
@@ -169,8 +175,6 @@
     width:         calc(100% - (#{$spacing-unit} / 2));
   }
 }
-
-
 
 /**
  * Page content
