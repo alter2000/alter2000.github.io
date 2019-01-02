@@ -10,10 +10,10 @@ layout: default
 	<article>
 		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 		<span class="post-meta">{{ post.date | date: date_format }}</span>
+    {%- include read_time.html -%}
 		<h3><a class="post-link" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
       {%- if post.link -%}@ {%- endif -%}{{ post.title | escape }}
     </a></h3>
-    {%- include read_time.html post=post -%}
 	{%- if site.show_excerpts -%}
 		{{ post.excerpt | markdownify }}
 	{%- endif -%}

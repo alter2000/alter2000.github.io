@@ -211,7 +211,11 @@
   @include relative-font-size(1.5);
 }
 
-
+.read-estimate {
+  float: right;
+  align-content: end;
+  align-self: end;
+}
 
 /**
  * Posts
