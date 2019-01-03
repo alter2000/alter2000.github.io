@@ -22,7 +22,7 @@ plugins:
   - jekyll-paginate
 permalink: "/:categories/:short_year/:title/"
 paginate: 6
-paginate_path: "/:num"
+paginate_path: "/:num/"
 
 # Sass settings
 sass:

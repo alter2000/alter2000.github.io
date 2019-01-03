@@ -4,21 +4,24 @@ layout: default
 
 {{ content }}
 
-{%- if site.posts.size > 0 -%}
-	<h2 class="post-list-heading">{{ page.list_title | default: "Hello there" }}</h2>
+<h2 class="post-list-heading">{{ page.list_title | default: "Hello there" }}</h2>
 {%- for post in site.posts -%}
-	<article>
-		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-		<span class="post-meta">{{ post.date | date: date_format }}</span>
-    {%- include read_time.html -%}
-		<h3><a class="post-link" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
-      {%- if post.link -%}@ {%- endif -%}{{ post.title | escape }}
-    </a></h3>
-	{%- if site.show_excerpts -%}
-		{{ post.excerpt | markdownify }}
-	{%- endif -%}
-	</article>
-{%- endfor -%}
-
-	<a class="rss-subscribe" href="{{ "/feed.xml" | relative_url }}">RSS</a>
+<article>
+	{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+	<span class="post-meta">{{ post.date | date: date_format }}</span>
+	{%- include read_time.html -%}
+	<h3><a class="post-link" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url | relative_url }}{% endif %}">
+		{%- if post.link -%}@ {%- endif -%}{{ post.title | escape }}
+	</a></h3>
+{%- if site.show_excerpts -%}
+	{{ post.excerpt | markdownify }}
 {%- endif -%}
+</article>
+{%- endfor -%}
+{%- if paginator.previous_page -%}
+<button href="{{ paginator.previous_page_path }}">Previous</button>
+{%- endif -%}
+{%- if paginator.next_page -%}
+<button href="{{ paginator.next_page_path }}">Next</button>
+{%- endif -%}
+<a class="rss-subscribe" href="{{ "/feed.xml" | relative_url }}">RSS</a>
