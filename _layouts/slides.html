@@ -50,107 +50,107 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-		{%- if page.controls -%}
+  {%- if page.controls -%}
 			// Display controls in the bottom right corner
 			controls: {{ page.controls }},
-		{%- endif -%}
-		{%- if page.progress -%}
+  {%- endif -%}
+  {%- if page.progress -%}
 			// Display a presentation progress bar
 			progress: {{ page.progress }},
-		{%- endif -%}
-		{%- if page.slide_number -%}
+  {%- endif -%}
+  {%- if page.slide_number -%}
 			// Display the page number of the current slide
 			slideNumber: {{ page.slide_number }},
-		{%- endif -%}
-		{%- if page.history -%}
+  {%- endif -%}
+  {%- if page.history -%}
 			// Push each slide change to the browser history
 			history: {{ page.history }},
-		{%- endif -%}
-		{%- if page.keyboard -%}
+  {%- endif -%}
+  {%- if page.keyboard -%}
 			// Enable keyboard shortcuts for navigation
 			keyboard: {{ page.keyboard }},
-		{%- endif -%}
-	{%- if overview -%}
+  {%- endif -%}
+	{%- if page.overview -%}
 			// Enable the slide overview mode
 			overview: {{ overview }},
 	{%- endif -%}
-	{%- if center -%}
+	{%- if page.center -%}
 			// Vertical centering of slides
 			center: {{ center }},
 	{%- endif -%}
-	{%- if touch -%}
+	{%- if page.touch -%}
 			// Enables touch navigation on devices with touch input
 			touch: {{ touch }},
 	{%- endif -%}
-	{%- if loop -%}
+	{%- if page.loop -%}
 			// Loop the presentation
 			loop: {{ loop }},
 	{%- endif -%}
-	{%- if rtl -%}
+	{%- if page.rtl -%}
 			// Change the presentation direction to be RTL
 			rtl: {{ rtl }},
 	{%- endif -%}
-	{%- if fragments -%}
+	{%- if page.fragments -%}
 			// Turns fragments on and off globally
 			fragments: {{ fragments }},
 	{%- endif -%}
-	{%- if embedded -%}
-			// Flags if the presentation is running in an embedded mode,
+	{%- if page.embedded -%}
+			// Flags if page.the presentation is running in an embedded mode,
 			// i.e. contained within a limited portion of the screen
 			embedded: {{ embedded }},
 	{%- endif -%}
-	{%- if help -%}
-			// Flags if we should show a help overlay when the questionmark
+	{%- if page.help -%}
+			// Flags if page.we should show a help overlay when the questionmark
 			// key is pressed
 			help: {{ help }},
 	{%- endif -%}
-	{%- if showNotes -%}
-			// Flags if speaker notes should be visible to all viewers
+	{%- if page.showNotes -%}
+			// Flags if page.speaker notes should be visible to all viewers
 			showNotes: {{ showNotes }},
 	{%- endif -%}
-	{%- if autoSlide -%}
+	{%- if page.autoSlide -%}
 			// Number of milliseconds between automatically proceeding to the
 			// next slide, disabled when set to 0, this value can be overwritten
 			// by using a data-autoslide attribute on your slides
 			autoSlide: {{ autoSlide }},
 	{%- endif -%}
-	{%- if autoSlideStoppable -%}
+	{%- if page.autoSlideStoppable -%}
 			// Stop auto-sliding after user input
 			autoSlideStoppable: {{ autoSlideStoppable }},
 	{%- endif -%}
-	{%- if mouseWheel -%}
+	{%- if page.mouseWheel -%}
 			// Enable slide navigation via mouse wheel
 			mouseWheel: {{ mouseWheel }},
 	{%- endif -%}
-	{%- if rollingLinks -%}
+	{%- if page.rollingLinks -%}
 			// Apply a 3D roll to links on hover
 			rollingLinks: {{ rollingLinks }},
 	{%- endif -%}
-	{%- if hideAddressBar -%}
+	{%- if page.hideAddressBar -%}
 			// Hides the address bar on mobile devices
 			hideAddressBar: {{ hideAddressBar }},
 	{%- endif -%}
-	{%- if previewLinks -%}
+	{%- if page.previewLinks -%}
 			// Opens links in an iframe preview overlay
 			previewLinks: {{ previewLinks }},
 	{%- endif -%}
-	{%- if transition -%}
+	{%- if page.transition -%}
 			// Transition style
 			transition: '{{ transition }}', // none/fade/slide/convex/concave/zoom
 	{%- endif -%}
-	{%- if transitionSpeed -%}
+	{%- if page.transitionSpeed -%}
 			// Transition speed
 			transitionSpeed: '{{ transitionSpeed }}', // default/fast/slow
 	{%- endif -%}
-	{%- if backgroundTransition -%}
+	{%- if page.backgroundTransition -%}
 			// Transition style for full page slide backgrounds
 			backgroundTransition: '{{ backgroundTransition }}', // none/fade/slide/convex/concave/zoom
 	{%- endif -%}
-	{%- if viewDistance -%}
+	{%- if page.viewDistance -%}
 			// Number of slides away from the current that are visible
 			viewDistance: {{ viewDistance }},
 	{%- endif -%}
-	{%- if parallaxBackgroundImage -%}
+	{%- if page.parallaxBackgroundImage -%}
 			// Parallax background image
 			parallaxBackgroundImage: '{{ parallaxBackgroundImage }}', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 	{%- elsif background-image -%}
@@ -158,36 +158,36 @@
 			parallaxBackgroundImage: '{{ background-image }}', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 	{%- endif -%}
 	{%- endif -%}
-	{%- if parallaxBackgroundSize -%}
+	{%- if page.parallaxBackgroundSize -%}
 			// Parallax background size
 			parallaxBackgroundSize: '{{ parallaxBackgroundSize }}', // CSS syntax, e.g. "2100px 900px"
 	{%- endif -%}
-	{%- if parallaxBackgroundHorizontal -%}
+	{%- if page.parallaxBackgroundHorizontal -%}
 			// Amount to move parallax background (horizontal and vertical) on slide change
 			// Number, e.g. 100
 			parallaxBackgroundHorizontal: {{ parallaxBackgroundHorizontal }},
 	{%- endif -%}
-	{%- if parallaxBackgroundVertical -%}
+	{%- if page.parallaxBackgroundVertical -%}
 			parallaxBackgroundVertical: {{ parallaxBackgroundVertical }},
 	{%- endif -%}
-	{%- if width -%}
+	{%- if page.width -%}
 			// The "normal" size of the presentation, aspect ratio will be preserved
 			// when the presentation is scaled to fit different resolutions. Can be
 			// specified using percentage units.
 			width: {{ width }},
 	{%- endif -%}
-	{%- if height -%}
+	{%- if page.height -%}
 			height: {{ height }},
 	{%- endif -%}
-	{%- if margin -%}
+	{%- if page.margin -%}
 			// Factor of the display size that should remain empty around the content
 			margin: {{ margin }},
 	{%- endif -%}
-	{%- if minScale -%}
+	{%- if page.minScale -%}
 			// Bounds for smallest/largest possible scale to apply to content
 			minScale: {{ minScale }},
 	{%- endif -%}
-	{%- if maxScale -%}
+	{%- if page.maxScale -%}
 			maxScale: {{ maxScale }},
 	{%- endif -%}
 	{%- unless page.mathjax == false -%}
