@@ -1,13 +1,19 @@
 ---
 title: "Random things from random places"
 email: "altnate2000@gmail.com"
-description: ""
+description: "This is my website, nothing more, nothing less. Nothing is
+regularly scheduled here."
 lang: en
-baseurl: ""
-# the subpath of your site, e.g. /blog
-url: "https://alter2000.github.io"
 # the base hostname & protocol for your site, e.g. http://example.com
-github_username: alter2000
+url: "https://alter2000.github.io"
+# the subpath of your site, e.g. /blog
+baseurl: ""
+
+external:
+  bitbucket: alter2000
+  github: alter2000
+  gitlab: alter2000
+
 
 # Build settings
 encoding: "utf-8"
@@ -19,7 +25,15 @@ markdown: kramdown
 safe: true
 plugins:
   - jekyll-feed
+  - jekyll-gist
   - jekyll-paginate
+  - jekyll-sitemap
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
 permalink: "/:categories/:short_year/:title/"
 paginate: 6
 paginate_path: "/:num/"
