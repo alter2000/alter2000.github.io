@@ -16,11 +16,11 @@ layout: default
 		{{ content }}
 	</main>
 
-	{%- if paginator.previous_page -%}
-		<button href="{{ paginator.previous_page_path }}">Previous</button>
+	{%- if page.previous.url -%}
+		<a class="pagination-prev" href="{{ page.previous.url }}">Previous</a>
 	{%- endif -%}
-	{%- if paginator.next_page -%}
-		<button href="{{ paginator.next_page_path }}">Next</button>
+	{%- if page.next.url -%}
+		<a class="pagination-next" href="{{ page.next.url }}">Next</a>
 	{%- endif -%}
 
 	<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>

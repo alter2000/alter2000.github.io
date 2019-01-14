@@ -5,7 +5,7 @@ layout: default
 {{ content }}
 
 <h2 class="post-list-heading">{{ page.list_title | default: "Hello there" }}</h2>
-{%- for post in site.posts -%}
+{%- for post in paginator.posts -%}
 <article>
 	{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 	<span class="post-meta">{{ post.date | date: date_format }}</span>
@@ -19,9 +19,8 @@ layout: default
 </article>
 {%- endfor -%}
 {%- if paginator.previous_page -%}
-<button href="{{ paginator.previous_page_path }}">Previous</button>
+<p><a href="{{ paginator.previous_page_path }}">Previous</a></p>
 {%- endif -%}
 {%- if paginator.next_page -%}
-<button href="{{ paginator.next_page_path }}">Next</button>
+<p><a href="{{ paginator.next_page_path }}">Next</a></p>
 {%- endif -%}
-<a class="rss-subscribe" href="{{ "/feed.xml" | relative_url }}">RSS</a>
