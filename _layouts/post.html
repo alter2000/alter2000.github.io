@@ -17,10 +17,10 @@ layout: default
 	</main>
 
 	{%- if page.previous.url -%}
-		<a class="pagination-prev" href="{{ page.previous.url }}">Previous</a>
+		<a class="pagination-prev" href="{{ page.previous.url }}">Older</a>
 	{%- endif -%}
 	{%- if page.next.url -%}
-		<a class="pagination-next" href="{{ page.next.url }}">Next</a>
+		<a class="pagination-next" href="{{ page.next.url }}">Newer</a>
 	{%- endif -%}
 
 	<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
