@@ -34,8 +34,8 @@ work:
   - company: Totel
     position: CTO
     website: https://totel.al (currently down), https:/instagram.com/to.tel
-    startDate: '2017-12-01'
-    endDate: '2018-07-01'
+    startDate: 2017-12-01
+    endDate: 2018-07-01
     summary: "Totel was and still is the only e-commerce business in Albania
               funded only by high schoolers. It was a fun project
               before university duties came."
@@ -49,7 +49,7 @@ volunteer:
   - organization: Open Labs Hackerspace
     position: member
     website: https://openlabs.cc
-    startDate: '2016-05-21'
+    startDate: 2016-05-21
     summary: "Open Labs, the first hackerspace founded in Albania, is
       a volunteer organization with a focus on open software, hardware
       and data and online privacy."
@@ -65,14 +65,14 @@ volunteer:
 
 education:
   - institution: Epitech Balkans (BE)
-    startDate: '2018-10-01'
+    startDate: 2018-10-01
   - institution: Shkolla e mesme "Ernest Koliqi"
-    startDate: '2015-09-14'
-    endDate: '2018-06-07'
+    startDate: 2015-09-14
+    endDate: 2018-06-07
 
 awards:
   - title: National Biology Olympiad for high schools
-    date: '2016-05-07'
+    date: 2016-05-07
     awarder: Ministria e Arsimit dhe Sporteve (Ministry of Education and Sports)
     summary: Third prize winner of the olympiad in tenth grade
 
@@ -112,7 +112,7 @@ languages:
     fluency: Native speaker
 
   - language: English
-    fluency: B2 (PET), studying C1
+    fluency: Near Native
 
   - language: German
     fluency: B1
