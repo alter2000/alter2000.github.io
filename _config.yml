@@ -20,7 +20,6 @@ external:
   linkedin: jorba-sh
 rss: RSS
 
-
 # Build settings
 encoding: "utf-8"
 highlighter: rouge
