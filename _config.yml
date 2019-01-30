@@ -1,8 +1,12 @@
 ---
 title: "Random things from random places"
-email: "altnate2000@gmail.com"
-description: "This is my website, nothing more, nothing less. Nothing is
-regularly scheduled here."
+email: "jor@ineedanew.pw"
+description: >
+  This is my website, nothing more, nothing less. Nothing is
+  regularly scheduled here. I hope you like it!
+
+
+  If you're looking for a hire, check the XP link.
 lang: en
 # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://alter2000.github.io"
@@ -13,6 +17,8 @@ external:
   bitbucket: alter2000
   github: alter2000
   gitlab: alter2000
+  linkedin: jorba-sh
+rss: RSS
 
 
 # Build settings
@@ -62,6 +68,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - tags
 
 defaults:
   - scope:

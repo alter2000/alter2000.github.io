@@ -1,0 +1,134 @@
+---
+basics:
+  name: Jor Bashllari
+  label: Student
+  picture: ''
+  email: altnate2000@gmail.com
+  phone: "+355 6820 16283"
+  website: https://ineedanew.pw
+  summary: "FOSS enthusiast, tinkerer, translator. Currently freshman
+  at Epitech Balkans."
+  location:
+    address: Sokrat Miho, Sandy 32B
+    postalCode: '1001'
+    city: Tirana
+    countryCode: AL
+  profiles:
+    - network: github
+      username: alter2000
+      url: https://github.com/alter2000
+    - network: gitlab
+      username: alter2000
+      url: https://gitlab.com/alter2000
+    - network: bitbucket
+      username: alter2000
+      url: https://bitbucket.org/alter2000
+    - network: reddit
+      username: alter2000
+      url: https://reddit.com/u/alter2000
+    - network: linkedin
+      username: jorba-sh
+      url: https://www.linkedin.com/in/jorba-sh/
+
+work:
+  - company: Totel
+    position: CTO
+    website: https://totel.al (currently down), https:/instagram.com/to.tel
+    startDate: '2017-12-01'
+    endDate: '2018-07-01'
+    summary: "Totel was and still is the only e-commerce business in Albania
+              funded only by high schoolers. It was a fun project
+              before university duties came."
+    highlights:
+      - 'Create and maintain the company web services:'
+      - Website
+      - Payments
+      - Deliveries
+
+volunteer:
+  - organization: Open Labs Hackerspace
+    position: member
+    website: https://openlabs.cc
+    startDate: '2016-05-21'
+    summary: "Open Labs, the first hackerspace founded in Albania, is
+      a volunteer organization with a focus on open software, hardware
+      and data and online privacy."
+    highlights:
+      - "Active member of the hackerspace well before a membership system was
+          set up"
+      - "Documentation of most of the infrastructure"
+      - "Main sysadmin, writing Ansible roles for all servers (WIP)"
+      - "Multiple talks and workshops, either in conferences/gatherings (OSCAL,
+          Linux Weekend) or standalone"
+  - organization: Other Open Source contributions
+    summary: Translations for the Ethereum project, Nextcloud, etc.
+
+education:
+  - institution: Epitech Balkans (BE)
+    startDate: '2018-10-01'
+  - institution: Shkolla e mesme "Ernest Koliqi"
+    startDate: '2015-09-14'
+    endDate: '2018-06-07'
+
+awards:
+  - title: National Biology Olympiad for high schools
+    date: '2016-05-07'
+    awarder: Ministria e Arsimit dhe Sporteve (Ministry of Education and Sports)
+    summary: Third prize winner of the olympiad in tenth grade
+
+skills:
+
+  - name: Translation/localization
+    level: Advanced
+    keywords:
+      - Albanian
+      - English
+      - German
+
+  - name: Web Development
+    level: Intermediate
+    keywords:
+      - Jekyll (this site!)
+      - Wagtail
+      - Flask
+
+  - name: Systems Administration
+    level: Intermediate
+    keywords:
+      - nginx/Apache
+      - Nextcloud
+      - Package maintaining
+
+  - name: Programming & Scripting Languages
+    level: Intermediate
+    keywords:
+      - Python - intermediate/advanced
+      - POSIX shell scripting - intermediate
+      - C - advanced
+
+languages:
+
+  - language: Albanian
+    fluency: Native speaker
+
+  - language: English
+    fluency: B2 (PET), studying C1
+
+  - language: German
+    fluency: B1
+
+  - language: French
+    fluency: A2, currently studying
+
+interests:
+
+  - name: Outdoors
+    keywords:
+      - cycling
+      - camping
+      - hiking
+
+  - name: Writing
+    keywords:
+      - blogging when possible
+      - documentation

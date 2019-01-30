@@ -96,12 +96,8 @@ a {
     color: lighten($brand-color, 15%);
   }
 
-  .social-media-list &:hover {
+  .extern-list &:hover {
     text-decoration: none;
-
-    .username {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -189,7 +185,7 @@ pre {
     vertical-align: text-top;
 }
 
-.social-media-list {
+.extern-list {
   li + li {
     padding-top: 5px;
   }
