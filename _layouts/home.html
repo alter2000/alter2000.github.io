@@ -19,8 +19,8 @@ layout: default
 </article>
 {%- endfor -%}
 {%- if paginator.previous_page -%}
-<p><a href="{{ paginator.previous_page_path }}">Older</a></p>
+<p><a href="{{ paginator.previous_page_path }}">Newer</a></p>
 {%- endif -%}
 {%- if paginator.next_page -%}
-<p><a href="{{ paginator.next_page_path }}">Newer</a></p>
+<p><a href="{{ paginator.next_page_path }}">Older</a></p>
 {%- endif -%}
