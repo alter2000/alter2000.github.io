@@ -6,7 +6,7 @@ description: >
   regularly scheduled here. I hope you like it!
 
 
-  If you're looking for a hire, check the XP link.
+  If you're looking for a hire, check [here](resume).
 lang: en
 # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://alter2000.github.io"
@@ -58,6 +58,7 @@ collections:
 include:
   - .htaccess
   - _pages
+  - assets/resume.css
 
 keep_files:
   - keybase.txt

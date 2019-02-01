@@ -1,27 +1,22 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-  <div class="wrapper">
+  <div class="footer-wrapper-wrapper">
     <h2 class="footer-heading">Links?</h2>
-    <div class="footer-col-wrapper">
-
-      <div class="footer-col footer-col-main">
-        {%- if site.author -%}
+    <div class="footer-wrapper">
+        <span class="footer-col-main">
+          {%- if site.author -%}
           {{ site.author | escape }}
-        {%- endif -%}
-        {%- if site.email -%}
-        <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
-        {%- endif -%}
-        {%- include social.html -%}
+          {%- endif -%}
+          {%- if site.email -%}
+          <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+          {%- endif -%}
+          {%- include social.html -%}
+        </span>
+        <span class="footer-col-git">
+          {%- include social-vcs.html -%}
+        </span>
+        <span class="footer-col-desc">
+          {{- site.description | markdownify -}}
+        </span>
       </div>
-
-      <div class="footer-col footer-col-git">
-        {%- include social-vcs.html -%}
-      </div>
-
-      <div class="footer-col footer-col-desc">
-        {{- site.description | markdownify -}}
-      </div>
-
-    </div>
   </div>
 </footer>
