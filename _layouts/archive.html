@@ -1,0 +1,9 @@
+---
+layout: page
+---
+
+## All posts
+
+{% for post in site.posts %}
+  * ({{ post.date | date_to_string }}) λ [{{ post.title }}]({{ post.url }})
+{% endfor %}

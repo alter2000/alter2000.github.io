@@ -14,12 +14,6 @@
             </svg>
           </span>
         </label>
-
-        <div class="trigger">
-          {%- for item in site.data.navigation.links -%}
-            <a class="nav{% if item.url == page.url %} nav-active{% endif %}" href="{{ item.url }}">{{ item.name }}</a>
-          {%- endfor -%}
-        </div>
       </nav>
     {%- endif -%}
   </div>

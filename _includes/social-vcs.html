@@ -28,7 +28,7 @@
   {%- endif -%}
 
 	{%- if site.external.gitlab -%}
-  <li><a href="https://gitlab.com/{{ site.external.gitlab| cgi_escape | escape }}">
+  <li><a href="https://gitlab.com/{{ site.external.gitlab | cgi_escape | escape }}">
     <svg class="svg-icon">
       <use xlink:href="{{ '/assets/minima-social-icons.svg#gitlab' | relative_url }}"></use>
     </svg>
