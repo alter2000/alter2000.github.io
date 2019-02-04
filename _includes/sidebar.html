@@ -1,5 +1,15 @@
-{% for item in site.data.navigation %}
-    <li {% if item.url == page.url %}class="sidebar-active"{% endif %}>
-      <a href="{{ item.url }}">{{ item.name }}</a>
-    </li>
-{% endfor %}
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+{% comment %}Modified from Lanyon: https://github.com/poole/lanyon/blob/master/_includes/sidebar.html{% endcomment %}
+
+<div class="sidebar" id="sidebar">
+  <nav class="sidebar-nav">
+    {%- for item in site.data.navigation.links -%}
+      <a class="sidebar-nav-item{% if item.url == page.url %} nav-active{% endif %}" href="{{ item.url }}">{{ item.name }}</a>
+    {%- endfor -%}
+  </nav>
+
+  <div class="sidebar-item">
+    <p> &copy; {{ site.time | date: '%Y' }}. Everything published under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>. I have a thing for sticky licenses.</p>
+  </div>
+</div>
