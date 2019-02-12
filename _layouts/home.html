@@ -4,7 +4,7 @@ layout: default
 
 {{ content }}
 
-<h2 class="post-list-heading">{{ site.title }}</h2>
+<h2 class="post-list-heading">{{ page.list_title | default: "Hello there" }}</h2>
 {%- for post in paginator.posts -%}
 <article>
 	{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -19,7 +19,7 @@ layout: default
 </article>
 {%- endfor -%}
 {%- if paginator.previous_page -%}
-<p><a class="pagination-newer" href="{{ paginator.previous_page_path }}">Newer</a></p>
+<p><a class="pagination-older" href="{{ paginator.previous_page_path }}">Newer</a></p>
 {%- endif -%}
 {%- if paginator.next_page -%}
 <p><a class="pagination-older" href="{{ paginator.next_page_path }}">Older</a></p>
