@@ -4,9 +4,11 @@
 
 <div class="sidebar" id="sidebar">
   <nav class="sidebar-nav">
-    {%- for item in site.data.navigation.links -%}
-      <a class="sidebar-nav-item{% if item.url == page.url %} nav-active{% endif %}" href="{{ item.url }}">{{ item.name }}</a>
-    {%- endfor -%}
+    <ul>
+      {%- for item in site.data.navigation.links -%}
+      <li><a class="sidebar-nav-item{% if item.url == page.url %} sidebar-nav-active{% endif %}" href="{{ item.url }}"> <strong>λ</strong> {{ item.name }}</a></li>
+      {%- endfor -%}
+    </ul>
   </nav>
 
   <div class="sidebar-item">

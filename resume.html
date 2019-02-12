@@ -63,7 +63,7 @@ css: resume
       {%- if skill.keywords -%}
       <div class="keywords">
         {%- for kw in skill.keywords -%}
-        {{ kw }}{%- unless forloop.last -%}, {%- else -%}{%- endunless -%}
+        {{ kw }}{%- unless forloop.last -%}, {% else %}{%- endunless -%}
         {%- endfor -%}
       </div>
       {%- endif -%}
