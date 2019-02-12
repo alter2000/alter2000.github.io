@@ -4,16 +4,8 @@
   {%- include head.html -%}
 
   <body>
-
-    {%- include header.html -%}
-
-    {%- if site.search == true -%}
-		<div class="search-content">
-			{%- include search_form.html -%}
-		</div>
-    {%- endif %}
-
     {%- include sidebar.html -%}
+    {%comment%}{%- include header.html -%}{%endcomment%}
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -23,6 +15,22 @@
 
     {%- include footer.html -%}
 
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
   </body>
 
 </html>

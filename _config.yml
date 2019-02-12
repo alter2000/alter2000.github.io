@@ -12,6 +12,7 @@ lang: en
 url: "https://alter2000.github.io"
 # the subpath of your site, e.g. /blog
 baseurl: ""
+image: https://github.com/alter2000.png
 
 external:
   bitbucket: alter2000

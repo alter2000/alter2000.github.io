@@ -1,14 +1,21 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 {% comment %}Modified from Lanyon: https://github.com/poole/lanyon/blob/master/_includes/sidebar.html{% endcomment %}
 
 <div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    {%- if site.image -%}
+    <img class="sidebar-image" src="{{site.image}}" alt="My picture of choice">
+    {%- endif -%}
+    <p>{{ site.description | markdownify }}</p>
+  </div>
+
   <nav class="sidebar-nav">
-    <ul>
-      {%- for item in site.data.navigation.links -%}
-      <li><a class="sidebar-nav-item{% if item.url == page.url %} sidebar-nav-active{% endif %}" href="{{ item.url }}"> <strong>λ</strong> {{ item.name }}</a></li>
-      {%- endfor -%}
-    </ul>
+    {%- for node in site.data.navigation.links | sort:"url" -%}
+    <li><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}"><strong>λ </strong>{{ node.name }}</a></li>
+    {%- endfor -%}
   </nav>
 
   <div class="sidebar-item">
