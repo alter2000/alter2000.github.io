@@ -105,6 +105,10 @@
   font-weight: normal;
   color: #fff;
 }
+.sidebar a:visited{
+  font-weight: normal;
+  color: #56606940;
+}
 .sidebar-item {
   padding: 1rem;
 }
