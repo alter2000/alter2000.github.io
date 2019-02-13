@@ -14,7 +14,7 @@
 
   <nav class="sidebar-nav">
     {%- for node in site.data.navigation.links | sort:"url" -%}
-    <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}"><strong>λ </strong>{{ node.name }}</a>
+    <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}"><strong>λ  </strong>{{ node.name }}</a>
     {%- endfor -%}
   </nav>
 
