@@ -16,11 +16,11 @@ layout: default
 		{{ content }}
 	</main>
 
-	{%- if page.previous.url -%}
-		<a class="pagination-prev" href="{{ page.previous.url }}">Older</a>
-	{%- endif -%}
 	{%- if page.next.url -%}
-		<a class="pagination-next" href="{{ page.next.url }}">Newer</a>
+		<a class="pagination-newer" href="{{ page.next.url }}">Newer</a>
+	{%- endif -%}
+	{%- if page.previous.url -%}
+		<a class="pagination-older" href="{{ page.previous.url }}">Older</a>
 	{%- endif -%}
 
 	<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
