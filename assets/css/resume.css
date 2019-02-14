@@ -1,6 +1,6 @@
 p { line-height: 1.6; }
 ul { margin-bottom: 0; }
-section { margin: 1em 0 2em; }
+section { margin: 2em 0; }
 blockquote {
 	margin: 0;
 	margin-bottom: 1em;
@@ -105,8 +105,21 @@ section h2 {
 	vertical-align: top;
 }
 
-/* education */
 #education .item {
+	display: inline-block;
+	vertical-align: top;
+	width: 49.5%;
+	border-bottom: 0;
+}
+
+#languages .item {
+	display: inline-block;
+	vertical-align: top;
+	width: 49.5%;
+	border-bottom: 0;
+}
+
+#interests .item {
 	display: inline-block;
 	vertical-align: top;
 	width: 49.5%;
