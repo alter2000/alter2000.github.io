@@ -95,7 +95,7 @@ section h2 {
 	display: inline-block;
 	text-transform: uppercase;
 	margin: 0 1em 0 0;
-	width: 23%;
+	min-width: 23%;
 	vertical-align: top;
 }
 
