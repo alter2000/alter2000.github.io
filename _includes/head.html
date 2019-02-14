@@ -2,10 +2,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/lanyon.css">
+  {% if site.author %}<meta name="author" content="{{ site.author }}">{% endif %}
+  {% if post.excerpt %}<meta name="description" content="{{ post.excerpt }}">{% endif %}
+  <link rel="stylesheet" href="{{ "/assets/css/lanyon.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- if page.css -%}{%- for stylesheet in page.css -%}
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
+  <link rel="stylesheet" href="{{ "/assets/css/{{ stylesheet }}.css" | relative_url }}">
   {%- endfor -%}{%- endif -%}
   {%- feed_meta -%}
 </head>

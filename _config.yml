@@ -12,6 +12,7 @@ lang: en
 url: "https://alter2000.github.io"
 # the subpath of your site, e.g. /blog
 baseurl: ""
+author: Jor Bashllari
 image: https://github.com/alter2000.png
 
 external:
