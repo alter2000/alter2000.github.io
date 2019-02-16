@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Old year's solutions
 date: 2018-01-03 23:48
 categories: life

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Ramblings part eye eye
 date: 2018-04-16 23:23
 categories: updates

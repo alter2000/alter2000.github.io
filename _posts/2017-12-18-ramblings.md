@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Pointless rant
 date: 2017-12-18 00:48
 categories: life

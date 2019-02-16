@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 5 days to OSCAL
 date: 2018-5-14 16:14
 categories: life

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Nextcloud - what is it?
 date: 2017-08-14 16:14
 categories: tutorials

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Një foto, një fabul
 date: 2016-11-29 21:08
 categories: albanian

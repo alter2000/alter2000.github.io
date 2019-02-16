@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Hello hell!
-date: 2016-09-13 00:00:00
+excerpt: What it says on the label
 ---
 
 Hello peeps, this is my first post with actual content. Since

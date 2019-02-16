@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Living on EDGE
 categories: life
 date: 2017-09-16 20:00
