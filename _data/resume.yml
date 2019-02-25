@@ -13,22 +13,22 @@ basics:
     postalCode: '1001'
     city: Tirana
     countryCode: AL
-  # profiles:
-  #   - network: github
-  #     username: alter2000
-  #     url: https://github.com/alter2000
-  #   - network: gitlab
-  #     username: alter2000
-  #     url: https://gitlab.com/alter2000
-  #   - network: bitbucket
-  #     username: alter2000
-  #     url: https://bitbucket.org/alter2000
-  #   - network: reddit
-  #     username: alter2000
-  #     url: https://reddit.com/u/alter2000
-  #   - network: linkedin
-  #     username: jorba-sh
-  #     url: https://www.linkedin.com/in/jorba-sh/
+#   profiles:
+#     - network: github
+#       username: alter2000
+#       url: https://github.com/alter2000
+#     - network: gitlab
+#       username: alter2000
+#       url: https://gitlab.com/alter2000
+#     - network: bitbucket
+#       username: alter2000
+#       url: https://bitbucket.org/alter2000
+#     - network: reddit
+#       username: alter2000
+#       url: https://reddit.com/u/alter2000
+#     - network: linkedin
+#       username: jorba-sh
+#       url: https://www.linkedin.com/in/jorba-sh/
 
 work:
   - company: Totel
@@ -60,8 +60,13 @@ volunteer:
       - "Main sysadmin, writing Ansible roles for all servers (WIP)"
       - "Multiple talks and workshops, either in conferences/gatherings (OSCAL,
           Linux Weekend) or standalone"
+  - organization: E-mma Balkans
+    position: Event manager
+    startDate: 2018-10-21
+    summary: "Event manager for an organization solely focused on inclusion in
+      tech; created from and working with Epitech students and high schoolers"
   - organization: Other Open Source contributions
-    summary: Translations for the Ethereum project, Nextcloud, etc.
+    summary: "Translations for the Ethereum project, Nextcloud, etc."
 
 education:
   - institution: Epitech Balkans (BE)
