@@ -1,6 +1,7 @@
 ---
 layout: default
-css: resume
+css:
+  - resume
 ---
 {% comment %}kanged from https://github.com/dennybritz/jsonresume-theme-short/{% endcomment %}
 
@@ -125,7 +126,7 @@ css: resume
   {%- endif -%}
 
   {%- if rs.volunteer -%}
-  <section class="experience">
+  <section class="volunteering">
     <h2>Volunteering</h2>
     {%- for vol in rs.volunteer -%}
     <div class="item">

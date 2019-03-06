@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="{{ "/assets/css/lanyon.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- if page.css -%}{%- for stylesheet in page.css -%}
-  <link rel="stylesheet" href="{{ "/assets/css/{{ stylesheet }}.css" | relative_url }}">
+  <link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
   {%- endfor -%}{%- endif -%}
   {%- feed_meta -%}
 </head>
