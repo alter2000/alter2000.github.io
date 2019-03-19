@@ -110,15 +110,15 @@ skills:
     keywords:
       - Python - intermediate/advanced
       - POSIX shell scripting - intermediate
-      - C - advanced
+      - C - intermediate/advanced
 
 languages:
 
   - language: Albanian
-    fluency: Native speaker
+    fluency: Native
 
   - language: English
-    fluency: Near Native
+    fluency: Near Native (C2)
 
   - language: German
     fluency: B1
