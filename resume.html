@@ -7,228 +7,219 @@ css:
 
 {%- assign rs = site.data.resume -%}
 
-  <style media="print">
-    body { font-size: 12px; }
-    .site-header { display: none; }
-    footer { display: none; }
-
-    section { page-break-inside: avoid; }
-    .item { page-break-inside: avoid; }
-  </style>
-
-  <section class="heading">
-    <header>
-      <h1>{{ rs.basics.name }}</h1>
-      <div class="contact">
-        {%- if rs.basics.email -%}<span class="detail">
-          <a href="mailto:{{ rs.basics.email }}">{{ rs.basics.email }}</a>
-        </span>{%- endif -%}
-        {%- if rs.basics.phone -%}<span class="detail">{{ rs.basics.phone }}</span>{%- endif -%}
-        {%- if rs.basics.website -%}<span class="detail">
-          <a href="{{ rs.basics.website }}">{{ rs.basics.website }}</a>
-        </span>{%- endif -%}
-      </div>
-    </header>
-
-    {%- if rs.basics.summary -%}{{ rs.basics.summary | markdownify }}{%- endif -%}
-
-    {%- for prof in rs.basics.profiles -%}
-    <div class="profile">
-      {%- if prof.network -%}<strong class="network">{{ prof.network }}</strong>{%- endif -%}
-      {%- if prof.username -%} <span class="username">
-        {%- if prof.url -%}<a href="{{ prof.url }}">{{ prof.username }}</a>
-        {%- else -%}{{ prof.username }}{%- endif -%}
+<section class="heading">
+  <header>
+    <h1>{{ rs.basics.name }}</h1>
+    <div class="contact">
+      {%- if rs.basics.email -%}<span class="detail">
+        <a href="mailto:{{ rs.basics.email }}">{{ rs.basics.email }}</a>
+      </span>{%- endif -%}
+      {%- if rs.basics.phone -%}<span class="detail">{{ rs.basics.phone }}</span>{%- endif -%}
+      {%- if rs.basics.website -%}<span class="detail">
+        <a href="{{ rs.basics.website }}">{{ rs.basics.website }}</a>
       </span>{%- endif -%}
     </div>
-    {%- endfor -%}
-  </section>
+  </header>
 
-  {%- if rs.publications -%}
-  <section id="publications">
-    <h2>Academic Publications</h2>
-    {%- for pub in rs.publications -%}
-    <div class="item">
-      {%- if pub.name -%}<div class="name">{{ pub.name }}</div>{%- endif -%}
-      {%- if pub.authors -%}<div class="authors">{{ pub.authors }}</div>{%- endif -%}
-      {%- if pub.venue -%}<div class="venue">{{ pub.venue }}</div>{%- endif -%}
-    </div>
-    {%- endfor -%}
-  </section>
-  {%- endif -%}
+  {%- if rs.basics.summary -%}{{ rs.basics.summary | markdownify }}{%- endif -%}
 
-  {%- if rs.skills -%}
-  <section id="skills">
-    <h2>Skills</h2>
-    {%- for skill in rs.skills -%}
-    <div class="item">
-      {%- if skill.name -%}
-      <div class="name">
-        {{ skill.name }}
-      </div>
-      {%- endif -%}
-      {%- if skill.keywords -%}
-      <div class="keywords">
-        {%- for kw in skill.keywords -%}
-        {{ kw }}{%- unless forloop.last -%}, {% else %}{%- endunless -%}
-        {%- endfor -%}
-      </div>
-      {%- endif -%}
-    </div>
-    {%- endfor -%}
-  </section>
-  {%- endif -%}
-
-  {%- if rs.work -%}
-  <section class="experience">
-    <h2>Experience</h2>
-    {%- for work in rs.work -%}
-    <section class="item">
-      <header>
-        {%- if work.company -%}
-          <h3 class="name">{{ work.company }}</h3>
-        {%- endif -%}
-      </header>
-      {%- if work.position -%} <span class="position"> {{ work.position }} </span> {%- endif -%}
-
-      {%- if work.startDate -%}
-      <span class="startDate"> {{ work.startDate | date: "%b %Y" }} </span>
-
-      {%- if work.endDate -%} <span class="endDate"> - {{ work.endDate | date: "%b %Y" }} </span>
-      {%- else -%} <span class="endDate"> - Present </span> {%- endif -%}
-      {%- endif -%}
-
-      {%- if summary -%} <div class="summary"><p>{{ summary | markdownify }}</p></div> {%- endif -%}
-      {%- if highlights -%} <ul class="highlights">
-        {%- for hl in highlights -%} <li>{{ hl }}<li> {%- endfor -%}
-      </ul> {%- endif -%}
-    </section>
-    {%- endfor -%}
-  </section>
-  {%- endif -%}
-
-  {%- if rs.projects -%}
-  <section class="experience">
-    <h2>Projects</h2>
-    {%- for proj in rs.projects -%}
-    <section class="item">
-      <header>
-        {%- if proj.name -%}
-          <h3 class="name">{{ proj.name }}</h3>
-        {%- endif -%}
-      </header>
-      {%- if proj.summary -%}<div class="summary"><p>{{ proj.summary | markdownify }}</p></div>{%- endif -%}
-      {%- if proj.highlights -%} <ul class="highlights">
-        {%- for hl in proj.highlights -%} <li>{{ hl }}<li> {%- endfor -%}
-      </ul> {%- endif -%}
-    </section>
-    {%- endfor -%}
-  </section>
-  {%- endif -%}
-
-  {%- if rs.volunteer -%}
-  <section class="volunteering">
-    <h2>Volunteering</h2>
-    {%- for vol in rs.volunteer -%}
-    <div class="item">
-
-      <header> {%- if vol.organization -%} <h3 class="name">{{ vol.organization }}</h3> {%- endif -%} </header>
-
-      {%- if vol.position -%} <span class="position"> {{ vol.position }} </span> {%- endif -%}
-
-      {%- if vol.startDate -%}
-      <span class="startDate"> {{ vol.startDate | date: "%b %Y" }} </span>
-      {%- if vol.endDate -%} <span class="endDate"> - {{ vol.endDate | date: "%b %Y" }} </span>
-      {%- else -%} <span class="endDate"> - Present </span> {%- endif -%}
-      {%- endif -%}
-
-      {%- if summary -%}<div class="summary"><p>{{ summary }}</p></div>{%- endif -%}
-      {%- if vol.highlights -%}
-      <ul class="highlights">
-        {%- for hl in vol.highlights -%} <li>{{ hl }}</li> {%- endfor -%}
-      </ul> {%- endif -%}
-    </div>
-    {%- endfor -%}
-  </section>
-  {%- endif -%}
-
-  {%- if rs.education -%}
-  <section id="education">
-    <h2>Education</h2>
-    {%- for edu in rs.education -%}
-    <div class="item">
-      <header>
-        {%- if edu.institution -%} <h3 class="name">{{ edu.institution }}</h3> {%- endif -%}
-      </header>
-
-      <div class="dates">
-        {%- if edu.startDate -%}
-        <span class="startDate"> {{ edu.startDate | date: "%b %Y" }} </span>
-
-        {%- if edu.endDate -%} <span class="endDate"> - {{edu.endDate | date: "%b %Y"}} </span>
-        {%- else -%} <span class="endDate"> - Present </span> {%- endif -%}
-        {%- endif -%}
-      </div>
-
-      <div class="qualification">
-        {%- if edu.studyType -%} <span class="studyType"> {{ edu.studyType }} </span> {%- endif -%}
-        {%- if edu.area -%} <span class="area"> - {{ edu.area }} </span> {%- endif -%}
-        {%- if edu.gpa -%} <span class="gpa"> GPA: {{ edu.gpa }} </span> {%- endif -%}
-      </div>
-
-    </div>
-    {%- endfor -%}
-  </section>
-  {%- endif -%}
-
-  {%- if rs.awards -%}
-  <section id="awards">
-    <h2>Awards</h2>
-    {%- for award in rs.awards -%}
-    <div class="item">
-      {%- if award.title -%} <div class="title"> {{ award.title }} </div> {%- endif -%}
-      {%- if award.date -%} <div class="date"> {{ award.date }} </div> {%- endif -%}
-      {%- if award.awarder -%} <div class="awarder"> {{ award.awarder }} </div> {%- endif -%}
-      {%- if award.summary -%} <div class="summary"> <p>{{ award.summary }}</p> </div> {%- endif -%}
-    </div>
-    {%- endfor -%}
-  </section>
-  {%- endif -%}
-
-  {%- if rs.languages -%}
-  <section id="languages">
-    <h2>Languages</h2>
-    {%- for lang in rs.languages -%}
-    <div class="item">
-      {%- if lang.language -%} <div class="language"> {{ lang.language }} </div> {%- endif -%}
-      {%- if lang.fluency -%} <div class="fluency"> <em>{{ lang.fluency }}</em> </div> {%- endif -%}
-    </div>
-    {%- endfor -%}
-  </section>
-  {%- endif -%}
-
-  {%- if rs.interests -%}
-  <section id="interests">
-    <h2>Interests</h2>
-    {%- for inter in rs.interests -%}
-    <div class="item">
-      {%- if inter.name -%} <div class="name"> {{ inter.name }} </div> {%- endif -%}
-      {%- if inter.keywords -%} <ul class="keywords">
-        {%- for kw in inter.keywords -%} <li>{{ kw }}</li> {%- endfor -%}
-      </ul> {%- endif -%}
-    </div>
-    {%- endfor -%}
-  </section>
-  {%- endif -%}
-
-  {%- if rs.references -%}
-  <section id="references">
-    <h2>References</h2>
-    {%- for ref in rs.references -%}
-    <div class="item">
-      {%- if ref.reference -%} <blockquote class="reference"> {{ ref.reference }} </blockquote> {%- endif -%}
-      {%- if ref.name -%} <div class="name"> — {{ ref.name }} </div> {%- endif -%}
-    </div>
-    {%- endfor -%}
-  </section>
-  {%- endif -%}
+  {%- for prof in rs.basics.profiles -%}
+  <div class="profile">
+    {%- if prof.network -%}<strong class="network">{{ prof.network }}</strong>{%- endif -%}
+    {%- if prof.username -%} <span class="username">
+      {%- if prof.url -%}<a href="{{ prof.url }}">{{ prof.username }}</a>
+      {%- else -%}{{ prof.username }}{%- endif -%}
+    </span>{%- endif -%}
   </div>
+  {%- endfor -%}
+</section>
+
+{%- if rs.publications -%}
+<section id="publications">
+  <h2>Academic Publications</h2>
+  {%- for pub in rs.publications -%}
+  <div class="item">
+    {%- if pub.name -%}<div class="name">{{ pub.name }}</div>{%- endif -%}
+    {%- if pub.authors -%}<div class="authors">{{ pub.authors }}</div>{%- endif -%}
+    {%- if pub.venue -%}<div class="venue">{{ pub.venue }}</div>{%- endif -%}
+  </div>
+  {%- endfor -%}
+</section>
+{%- endif -%}
+
+{%- if rs.skills -%}
+<section id="skills">
+  <h2>Skills</h2>
+  {%- for skill in rs.skills -%}
+  <div class="item">
+    {%- if skill.name -%}
+    <div class="name">
+      {{ skill.name }}
+    </div>
+    {%- endif -%}
+    {%- if skill.keywords -%}
+    <div class="keywords">
+      {%- for kw in skill.keywords -%}
+      {{ kw }}{%- unless forloop.last -%}, {% else %}{%- endunless -%}
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+  </div>
+  {%- endfor -%}
+</section>
+{%- endif -%}
+
+{%- if rs.work -%}
+<section class="experience">
+  <h2>Experience</h2>
+  {%- for work in rs.work -%}
+  <section class="item">
+    <header>
+      {%- if work.company -%}
+        <h3 class="name">{{ work.company }}</h3>
+      {%- endif -%}
+    </header>
+    {%- if work.position -%} <span class="position"> {{ work.position }} </span> {%- endif -%}
+
+    {%- if work.startDate -%}
+    <span class="startDate"> {{ work.startDate | date: "%b %Y" }} </span>
+
+    {%- if work.endDate -%} <span class="endDate"> - {{ work.endDate | date: "%b %Y" }} </span>
+    {%- else -%} <span class="endDate"> - Present </span> {%- endif -%}
+    {%- endif -%}
+
+    {%- if summary -%} <div class="summary"><p>{{ summary | markdownify }}</p></div> {%- endif -%}
+    {%- if highlights -%} <ul class="highlights">
+      {%- for hl in highlights -%} <li>{{ hl }}<li> {%- endfor -%}
+    </ul> {%- endif -%}
+  </section>
+  {%- endfor -%}
+</section>
+{%- endif -%}
+
+{%- if rs.projects -%}
+<section class="experience">
+  <h2>Projects</h2>
+  {%- for proj in rs.projects -%}
+  <section class="item">
+    <header>
+      {%- if proj.name -%}
+        <h3 class="name">{{ proj.name }}</h3>
+      {%- endif -%}
+    </header>
+    {%- if proj.summary -%}<div class="summary"><p>{{ proj.summary | markdownify }}</p></div>{%- endif -%}
+    {%- if proj.highlights -%} <ul class="highlights">
+      {%- for hl in proj.highlights -%} <li>{{ hl }}<li> {%- endfor -%}
+    </ul> {%- endif -%}
+  </section>
+  {%- endfor -%}
+</section>
+{%- endif -%}
+
+{%- if rs.volunteer -%}
+<section class="volunteering">
+  <h2>Volunteering</h2>
+  {%- for vol in rs.volunteer -%}
+  <div class="item">
+
+    <header> {%- if vol.organization -%} <h3 class="name">{{ vol.organization }}</h3> {%- endif -%} </header>
+
+    {%- if vol.position -%} <span class="position"> {{ vol.position }} </span> {%- endif -%}
+
+    {%- if vol.startDate -%}
+    <span class="startDate"> {{ vol.startDate | date: "%b %Y" }} </span>
+    {%- if vol.endDate -%} <span class="endDate"> - {{ vol.endDate | date: "%b %Y" }} </span>
+    {%- else -%} <span class="endDate"> - Present </span> {%- endif -%}
+    {%- endif -%}
+
+    {%- if summary -%}<div class="summary"><p>{{ summary }}</p></div>{%- endif -%}
+    {%- if vol.highlights -%}
+    <ul class="highlights">
+      {%- for hl in vol.highlights -%} <li>{{ hl }}</li> {%- endfor -%}
+    </ul> {%- endif -%}
+  </div>
+  {%- endfor -%}
+</section>
+{%- endif -%}
+
+{%- if rs.education -%}
+<section id="education">
+  <h2>Education</h2>
+  {%- for edu in rs.education -%}
+  <div class="item">
+    <header>
+      {%- if edu.institution -%} <h3 class="name">{{ edu.institution }}</h3> {%- endif -%}
+    </header>
+
+    <div class="dates">
+      {%- if edu.startDate -%}
+      <span class="startDate"> {{ edu.startDate | date: "%b %Y" }} </span>
+
+      {%- if edu.endDate -%} <span class="endDate"> - {{edu.endDate | date: "%b %Y"}} </span>
+      {%- else -%} <span class="endDate"> - Present </span> {%- endif -%}
+      {%- endif -%}
+    </div>
+
+    <div class="qualification">
+      {%- if edu.studyType -%} <span class="studyType"> {{ edu.studyType }} </span> {%- endif -%}
+      {%- if edu.area -%} <span class="area"> - {{ edu.area }} </span> {%- endif -%}
+      {%- if edu.gpa -%} <span class="gpa"> GPA: {{ edu.gpa }} </span> {%- endif -%}
+    </div>
+
+  </div>
+  {%- endfor -%}
+</section>
+{%- endif -%}
+
+{%- if rs.awards -%}
+<section id="awards">
+  <h2>Awards</h2>
+  {%- for award in rs.awards -%}
+  <div class="item">
+    {%- if award.title -%} <div class="title"> {{ award.title }} </div> {%- endif -%}
+    {%- if award.date -%} <div class="date"> {{ award.date }} </div> {%- endif -%}
+    {%- if award.awarder -%} <div class="awarder"> {{ award.awarder }} </div> {%- endif -%}
+    {%- if award.summary -%} <div class="summary"> <p>{{ award.summary }}</p> </div> {%- endif -%}
+  </div>
+  {%- endfor -%}
+</section>
+{%- endif -%}
+
+{%- if rs.languages -%}
+<section id="languages">
+  <h2>Languages</h2>
+  {%- for lang in rs.languages -%}
+  <div class="item">
+    {%- if lang.language -%} <div class="language"> {{ lang.language }} </div> {%- endif -%}
+    {%- if lang.fluency -%} <div class="fluency"> <em>{{ lang.fluency }}</em> </div> {%- endif -%}
+  </div>
+  {%- endfor -%}
+</section>
+{%- endif -%}
+
+{%- if rs.interests -%}
+<section id="interests">
+  <h2>Interests</h2>
+  {%- for inter in rs.interests -%}
+  <div class="item">
+    {%- if inter.name -%} <div class="name"> {{ inter.name }} </div> {%- endif -%}
+    {%- if inter.keywords -%} <ul class="keywords">
+      {%- for kw in inter.keywords -%} <li>{{ kw }}</li> {%- endfor -%}
+    </ul> {%- endif -%}
+  </div>
+  {%- endfor -%}
+</section>
+{%- endif -%}
+
+{%- if rs.references -%}
+<section id="references">
+  <h2>References</h2>
+  {%- for ref in rs.references -%}
+  <div class="item">
+    {%- if ref.reference -%} <blockquote class="reference"> {{ ref.reference }} </blockquote> {%- endif -%}
+    {%- if ref.name -%} <div class="name"> — {{ ref.name }} </div> {%- endif -%}
+  </div>
+  {%- endfor -%}
+</section>
+{%- endif -%}
+</div>

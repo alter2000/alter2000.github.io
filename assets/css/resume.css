@@ -128,3 +128,14 @@ section h2 {
 
 #publications .authors { font-size: 0.8em; }
 #publications .venue { font-size: 0.8em; }
+
+@media print {
+  body { font-size: 12px; }
+  .site-header { display: none; }
+  footer { display: none; }
+  .item { page-break-inside: avoid; }
+}
+
+@page {
+	margin: 1in;
+}
