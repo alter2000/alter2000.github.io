@@ -13,22 +13,22 @@ basics:
     postalCode: '1001'
     city: Tirana
     countryCode: AL
-#   profiles:
-#     - network: github
-#       username: alter2000
-#       url: https://github.com/alter2000
-#     - network: gitlab
-#       username: alter2000
-#       url: https://gitlab.com/alter2000
-#     - network: bitbucket
-#       username: alter2000
-#       url: https://bitbucket.org/alter2000
-#     - network: reddit
-#       username: alter2000
-#       url: https://reddit.com/u/alter2000
-#     - network: linkedin
-#       username: jorba-sh
-#       url: https://www.linkedin.com/in/jorba-sh/
+  profiles:
+    - network: github
+      username: alter2000
+      url: https://github.com/alter2000
+    - network: gitlab
+      username: alter2000
+      url: https://gitlab.com/alter2000
+    - network: bitbucket
+      username: alter2000
+      url: https://bitbucket.org/alter2000
+    # - network: reddit
+    #   username: alter2000
+    #   url: https://reddit.com/u/alter2000
+    - network: linkedin
+      username: jorba-sh
+      url: https://www.linkedin.com/in/jorba-sh/
 
 work:
   - company: Totel
