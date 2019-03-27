@@ -83,12 +83,11 @@ css:
 
     {%- if work.startDate -%}
     <span class="startDate"> {{ work.startDate | date: "%b %Y" }} </span>
-
     {%- if work.endDate -%} <span class="endDate"> - {{ work.endDate | date: "%b %Y" }} </span>
     {%- else -%} <span class="endDate"> - Present </span> {%- endif -%}
     {%- endif -%}
 
-    {%- if summary -%} <div class="summary"><p>{{ summary | markdownify }}</p></div> {%- endif -%}
+    {%- if summary -%} <div class="summary">{{ summary | markdownify }}</div> {%- endif -%}
     {%- if highlights -%} <ul class="highlights">
       {%- for hl in highlights -%} <li>{{ hl }}<li> {%- endfor -%}
     </ul> {%- endif -%}

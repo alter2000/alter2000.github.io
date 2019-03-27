@@ -3,7 +3,7 @@ basics:
   name: Jor Bashllari
   label: Student
   picture: ''
-  email: altnate2000@gmail.com
+  email: jor@ineedanew.pw
   phone: "+355-6820-16283"
   website: https://ineedanew.pw
   summary: "FOSS enthusiast, tinkerer, translator. Currently freshman
@@ -93,7 +93,7 @@ skills:
   - name: Web Development
     level: Intermediate
     keywords:
-      - Jekyll (this site!)
+      - Jekyll
       - Wagtail
       - Flask
 

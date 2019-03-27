@@ -5,6 +5,7 @@ blockquote {
 	margin: 0;
 	margin-bottom: 1em;
 }
+
 #resume {
 	margin: 2em 2em 2em 2.5em;
 	max-width: 760px;
@@ -36,6 +37,7 @@ blockquote {
 	display: block;
 	margin: 0 1em 0 0;
 }
+
 /* section / line breaks */
 section h2 {
 	font-size: 140%;
@@ -130,12 +132,11 @@ section h2 {
 #publications .venue { font-size: 0.8em; }
 
 @media print {
-  body { font-size: 12px; }
-  .site-header { display: none; }
-  footer { display: none; }
-  .item { page-break-inside: avoid; }
-}
-
-@page {
-	margin: 1in;
+	@page { margin: 0.8in; }
+	#resume { margin: 0.8em; }
+	body { font-size: 12px; }
+	.site-header { display: none; }
+	footer { display: none; }
+	/* .section { page-break-inside: avoid; } */
+	.item { page-break-inside: avoid; }
 }
