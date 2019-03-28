@@ -1,6 +1,12 @@
 p { line-height: 1.6; }
 ul { margin-bottom: 0; }
-section { margin: 2em 0; }
+
+section {
+	margin: 2em 0;
+	break-inside: avoid;
+	page-break-inside: avoid;
+}
+
 blockquote {
 	margin: 0;
 	margin-bottom: 1em;
@@ -128,8 +134,10 @@ section h2 {
 	border-bottom: 0;
 }
 
-#publications .authors { font-size: 0.8em; }
-#publications .venue { font-size: 0.8em; }
+#publications {
+	.authors { font-size: 0.8em; }
+	.venue { font-size: 0.8em; }
+}
 
 @media print {
 	@page { margin: 0.8in; }
@@ -137,6 +145,8 @@ section h2 {
 	body { font-size: 12px; }
 	.site-header { display: none; }
 	footer { display: none; }
-	/* .section { page-break-inside: avoid; } */
-	.item { page-break-inside: avoid; }
+	.item {
+		break-inside: avoid !important;
+		page-break-inside: avoid;
+	}
 }
