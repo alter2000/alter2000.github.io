@@ -75,6 +75,29 @@ education:
     startDate: 2015-09-14
     endDate: 2018-06-07
 
+projects:
+  - name: "My Web"
+    summary: "A client-server network with a full LEMP/LAMP stack, plus an
+      Ansible playbook to automate the whole project"
+    highlights:
+      - Ansible
+      - Linux/UNIX
+      - Nginx
+      - PostgreSQL/MySQL
+  - name: "EPyTodo"
+    summary: "A REST API communicating via JSON built on Flask and a \\*SQL
+      wrapper of choice as driver for an ORM"
+    highlights:
+      - Python
+      - MVC
+      - REST
+  - name: "mysh"
+    summary: "Reimplementation of `tcsh` with full functionality and limited
+      use of the standard library"
+    highlights:
+      - C
+      - "`ncurses`"
+
 # awards:
 #   - title: National Biology Olympiad for high schools
 #     date: 2016-05-07
