@@ -113,24 +113,11 @@ section h2 {
 	vertical-align: top;
 }
 
-#education .item {
+.two-col .item {
 	display: inline-block;
 	vertical-align: top;
-	width: 49.5%;
-	border-bottom: 0;
-}
-
-#languages .item {
-	display: inline-block;
-	vertical-align: top;
-	width: 49.5%;
-	border-bottom: 0;
-}
-
-#interests .item {
-	display: inline-block;
-	vertical-align: top;
-	width: 49.5%;
+	margin: 2em;
+	width: 40%;
 	border-bottom: 0;
 }
 

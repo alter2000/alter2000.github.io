@@ -70,7 +70,7 @@ css:
 {%- endif -%}
 
 {%- if rs.work -%}
-<section class="experience">
+<section class="experience two-col">
   <h2>Experience</h2>
   {%- for work in rs.work -%}
   <section class="item">
@@ -97,7 +97,7 @@ css:
 {%- endif -%}
 
 {%- if rs.projects -%}
-<section class="experience">
+<section class="experience two-col" id="projects">
   <h2>Projects</h2>
   {%- for proj in rs.projects -%}
   <section class="item">
@@ -108,7 +108,7 @@ css:
     </header>
     {%- if proj.summary -%}<div class="summary"><p>{{ proj.summary | markdownify }}</p></div>{%- endif -%}
     {%- if proj.highlights -%} <ul class="highlights">
-      {%- for hl in proj.highlights -%} <li>{{ hl }}<li> {%- endfor -%}
+      {%- for hl in proj.highlights -%} <li>{{ hl | markdownify }}</li> {%- endfor -%}
     </ul> {%- endif -%}
   </section>
   {%- endfor -%}
@@ -142,7 +142,7 @@ css:
 {%- endif -%}
 
 {%- if rs.education -%}
-<section id="education">
+<section id="education" class="two-col">
   <h2>Education</h2>
   {%- for edu in rs.education -%}
   <div class="item">
@@ -185,7 +185,7 @@ css:
 {%- endif -%}
 
 {%- if rs.languages -%}
-<section id="languages">
+<section id="languages" class="two-col">
   <h2>Languages</h2>
   {%- for lang in rs.languages -%}
   <div class="item">
@@ -197,7 +197,7 @@ css:
 {%- endif -%}
 
 {%- if rs.interests -%}
-<section id="interests">
+<section id="interests" class="two-col">
   <h2>Interests</h2>
   {%- for inter in rs.interests -%}
   <div class="item">
@@ -211,7 +211,7 @@ css:
 {%- endif -%}
 
 {%- if rs.references -%}
-<section id="references">
+<section id="references" class="two-col">
   <h2>References</h2>
   {%- for ref in rs.references -%}
   <div class="item">
