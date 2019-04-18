@@ -109,14 +109,13 @@ section h2 {
 
 #skills .item .keywords {
 	display: inline-block;
-	width: 70%;
 	vertical-align: top;
 }
 
 .two-col .item {
 	display: inline-block;
 	vertical-align: top;
-	margin: 2em;
+	margin: 1em;
 	width: 40%;
 	border-bottom: 0;
 }

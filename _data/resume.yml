@@ -96,7 +96,7 @@ projects:
       use of the standard library"
     highlights:
       - C
-      - "`ncurses`"
+      - '<code class="highlighter-rouge">ncurses</code>'
 
 # awards:
 #   - title: National Biology Olympiad for high schools
