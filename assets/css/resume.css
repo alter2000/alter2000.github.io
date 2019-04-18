@@ -4,7 +4,6 @@ ul { margin-bottom: 0; }
 section {
 	margin: 2em 0;
 	break-inside: avoid;
-	page-break-inside: avoid;
 }
 
 blockquote {
@@ -132,7 +131,8 @@ section h2 {
 	.site-header { display: none; }
 	footer { display: none; }
 	.item {
-		break-inside: avoid !important;
+		break-inside: avoid;
 		page-break-inside: avoid;
+		margin: 0.7em;
 	}
 }

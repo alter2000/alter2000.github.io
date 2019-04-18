@@ -76,6 +76,19 @@ education:
     endDate: 2018-06-07
 
 projects:
+  - name: "mysh"
+    summary: "Reimplementation of `tcsh` with full functionality and limited
+      use of the standard library"
+    highlights:
+      - C
+      - '<code class="highlighter-rouge">ncurses</code>'
+  - name: "EPyTodo"
+    summary: "A REST API communicating via JSON built on Flask and a \\*SQL
+      wrapper of choice as driver for an ORM"
+    highlights:
+      - Python
+      - MVC
+      - REST
   - name: "My Web"
     summary: "A client-server network with a full LEMP/LAMP stack, plus an
       Ansible playbook to automate the whole project"
@@ -84,19 +97,6 @@ projects:
       - Linux/UNIX
       - Nginx
       - PostgreSQL/MySQL
-  - name: "EPyTodo"
-    summary: "A REST API communicating via JSON built on Flask and a \\*SQL
-      wrapper of choice as driver for an ORM"
-    highlights:
-      - Python
-      - MVC
-      - REST
-  - name: "mysh"
-    summary: "Reimplementation of `tcsh` with full functionality and limited
-      use of the standard library"
-    highlights:
-      - C
-      - '<code class="highlighter-rouge">ncurses</code>'
 
 # awards:
 #   - title: National Biology Olympiad for high schools
