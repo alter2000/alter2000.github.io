@@ -1,11 +1,6 @@
 p { line-height: 1.4; }
 ul { margin-bottom: 0; }
 
-section {
-	margin: 2em 0;
-	break-inside: avoid;
-}
-
 blockquote {
 	margin: 0;
 	margin-bottom: 1em;
@@ -44,9 +39,15 @@ blockquote {
 }
 
 /* section / line breaks */
+section {
+	margin: 2em 0;
+	break-inside: avoid;
+	page-break-inside: avoid;
+}
+
 section h2 {
 	font-size: 140%;
-	margin: 0 0 1em;
+	margin: 0 0 0.8em;
 	text-transform: uppercase;
 	color: #BC1B39;
 	font-weight: 400;
@@ -90,6 +91,14 @@ section h2 {
 	font-size: 90%;
 }
 
+.two-col .item {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0.7em;
+	width: 45%;
+	border-bottom: 0;
+}
+
 /* skills */
 #skills .item {
 	margin: 0.5em 0;
@@ -111,28 +120,23 @@ section h2 {
 	vertical-align: top;
 }
 
-.two-col .item {
-	display: inline-block;
-	vertical-align: top;
-	margin: 1em;
-	width: 40%;
-	border-bottom: 0;
-}
-
 #publications {
 	.authors { font-size: 0.8em; }
 	.venue { font-size: 0.8em; }
 }
 
 @media print {
-	@page { margin: 0.8in; }
-	#resume { margin: 0.8em; }
+
+	@page { margin: 0.5in; }
+	#resume { margin: 0.5em; }
 	body { font-size: 12px; }
 	.site-header { display: none; }
 	footer { display: none; }
+
 	.item {
 		break-inside: avoid;
 		page-break-inside: avoid;
-		margin: 0.7em;
+		margin: 0.5em;
 	}
+
 }
