@@ -96,32 +96,13 @@ css:
 </section>
 {%- endif -%}
 
-{%- if rs.projects -%}
-<section class="experience two-col" id="projects">
-  <h2>Projects</h2>
-  {%- for proj in rs.projects -%}
-  <section class="item">
-    <header>
-      {%- if proj.name -%}
-        <h3 class="name">{{ proj.name }}</h3>
-      {%- endif -%}
-    </header>
-    {%- if proj.summary -%}<div class="summary"><p>{{ proj.summary | markdownify }}</p></div>{%- endif -%}
-    {%- if proj.highlights -%} <ul class="highlights">
-      {%- for hl in proj.highlights -%} <li>{{ hl }}</li> {%- endfor -%}
-    </ul> {%- endif -%}
-  </section>
-  {%- endfor -%}
-</section>
-{%- endif -%}
-
 {%- if rs.volunteer -%}
 <section class="volunteering">
   <h2>Volunteering</h2>
   {%- for vol in rs.volunteer -%}
   <div class="item">
 
-    <header> {%- if vol.organization -%} <h3 class="name">{{ vol.organization }}</h3> {%- endif -%} </header>
+    <header><h3 class="name"> {%- if vol.website -%} <a href="{{ vol.website }}"> {{ vol.organization }} </a> {%- else -%} {{ vol.organization }} {%- endif -%}</h3></header>
 
     {%- if vol.position -%} <span class="position"> {{ vol.position }} </span> {%- endif -%}
 
@@ -137,6 +118,25 @@ css:
       {%- for hl in vol.highlights -%} <li>{{ hl }}</li> {%- endfor -%}
     </ul> {%- endif -%}
   </div>
+  {%- endfor -%}
+</section>
+{%- endif -%}
+
+{%- if rs.projects -%}
+<section class="experience two-col" id="projects">
+  <h2>Projects</h2>
+  {%- for proj in rs.projects -%}
+  <section class="item">
+    <header>
+      {%- if proj.name -%}
+        <h4 class="name">{{ proj.name }}</h4>
+      {%- endif -%}
+    </header>
+    {%- if proj.summary -%}<div class="summary"><p>{{ proj.summary | markdownify }}</p></div>{%- endif -%}
+    {%- if proj.highlights -%} <ul class="highlights">
+      {%- for hl in proj.highlights -%} <li>{{ hl }}</li> {%- endfor -%}
+    </ul> {%- endif -%}
+  </section>
   {%- endfor -%}
 </section>
 {%- endif -%}
