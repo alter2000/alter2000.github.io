@@ -1,11 +1,6 @@
 p { line-height: 1.4; }
 ul { margin-bottom: 0; }
 
-section {
-	margin: 2em 0;
-	break-inside: avoid;
-}
-
 blockquote {
 	margin: 0;
 	margin-bottom: 1em;
@@ -16,37 +11,48 @@ blockquote {
 	max-width: 760px;
 }
 
-.heading header h1 {
-	font-size: 180%;
-	margin: 0.5em 0;
-	font-weight: 600;
-}
+.heading header {
 
-.heading header h2 {
-	font-size: 140%;
-	margin: 0;
-	font-weight: 400;
-}
+	h1 {
+		font-size: 180%;
+		margin: 0.5em 0;
+		font-weight: 600;
+	}
 
-.heading header .contact .detail {
-	margin: 0 1em 0 0;
+	h2 {
+		font-size: 140%;
+		margin: 0;
+		font-weight: 400;
+	}
+
+	.contact .detail {
+		margin: 0 1em 0 0;
+	}
+
 }
 
 .profile {
 	display: inline-block;
 	margin: 0 1em 0 0;
-}
 
-.profile strong,
-.profile span {
-	display: block;
-	margin: 0 1em 0 0;
+	strong,
+	span {
+		display: block;
+		margin: 0 1em 0 0;
+	}
+
 }
 
 /* section / line breaks */
+section {
+	margin: 2em 0;
+	break-inside: avoid;
+	page-break-inside: avoid;
+}
+
 section h2 {
 	font-size: 140%;
-	margin: 0 0 1em;
+	margin: 0 0 0.8em;
 	text-transform: uppercase;
 	color: #BC1B39;
 	font-weight: 400;
@@ -57,37 +63,41 @@ section h2 {
 	margin: 0 0 1em;
 	padding: 0 0 1em;
 	border-bottom: 1px solid #DEE8F1;
+
+	header a { display: inline-block; }
+
+	header h3 {
+		margin: 0.2em 1em 0.2em 0;
+		display: inline-block;
+		font-weight: 600;
+	}
+
+	.position {
+		font-weight: 600;
+		font-size: 100%;
+		margin: 0.2em 1em 0.2em 0;
+	}
+
+	.startDate,
+	.endDate { color: #6B6B6B; }
+
+	.highlights {
+		list-style: square;
+		font-size: 90%;
+	}
+
 }
 
 .item:last-child {
 	border-bottom: none;
 }
 
-
-.item header h3 {
-	margin: 0.2em 1em 0.2em 0;
+.two-col .item {
 	display: inline-block;
-	font-weight: 600;
-}
-
-.item header a {
-	display: inline-block;
-}
-
-.item .position {
-	font-weight: 600;
-	font-size: 100%;
-	margin: 0.2em 1em 0.2em 0;
-}
-
-.item .startDate,
-.item .endDate {
-	color: #6B6B6B;
-}
-
-.item .highlights {
-	list-style: square;
-	font-size: 90%;
+	vertical-align: top;
+	margin: 0.7em;
+	width: 45%;
+	border-bottom: 0;
 }
 
 /* skills */
@@ -95,28 +105,21 @@ section h2 {
 	margin: 0.5em 0;
 	padding: 0 0 0.5em;
 	font-size: 90%;
-}
 
-#skills .item .name {
-	font-weight: 600;
-	display: inline-block;
-	text-transform: uppercase;
-	margin: 0 1em 0 0;
-	min-width: 23%;
-	vertical-align: top;
-}
+	.name {
+		font-weight: 600;
+		display: inline-block;
+		text-transform: uppercase;
+		margin: 0 1em 0 0;
+		min-width: 23%;
+		vertical-align: top;
+	}
 
-#skills .item .keywords {
-	display: inline-block;
-	vertical-align: top;
-}
+	.keywords {
+		display: inline-block;
+		vertical-align: top;
+	}
 
-.two-col .item {
-	display: inline-block;
-	vertical-align: top;
-	margin: 1em;
-	width: 40%;
-	border-bottom: 0;
 }
 
 #publications {
@@ -125,14 +128,17 @@ section h2 {
 }
 
 @media print {
-	@page { margin: 0.8in; }
-	#resume { margin: 0.8em; }
+
+	@page { margin: 0.5in; }
+	#resume { margin: 0.5em; }
 	body { font-size: 12px; }
 	.site-header { display: none; }
 	footer { display: none; }
+
 	.item {
 		break-inside: avoid;
 		page-break-inside: avoid;
-		margin: 0.7em;
+		margin: 0.5em;
 	}
+
 }
