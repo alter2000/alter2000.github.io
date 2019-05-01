@@ -69,8 +69,8 @@ volunteer:
   - organization: Epitech Innovation Hub
     startDate: 2019-04-08
     position: Member
-    highlights: "Organizing and hosting workshops for tools and technology
-      useful for other Epitech students"
+    highlights: "Organize and host workshops for tools and technology useful
+      for other Epitech students"
   - organization: Other Open Source contributions
     summary: "Translations for the Ethereum project, Nextcloud, etc."
 
