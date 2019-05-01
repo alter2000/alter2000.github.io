@@ -47,7 +47,7 @@ work:
 
 volunteer:
   - organization: Open Labs Hackerspace
-    position: member
+    position: Member
     website: https://openlabs.cc
     startDate: 2016-05-21
     summary: "Open Labs, the first hackerspace founded in Albania, is
@@ -58,13 +58,19 @@ volunteer:
           set up"
       - "Documentation of most of the infrastructure"
       - "Main sysadmin, writing Ansible roles for all servers (WIP)"
-      - "Multiple talks and workshops, either in conferences/gatherings (OSCAL,
-          Linux Weekend) or standalone"
+      - "Multiple talks and workshops, in conferences/gatherings (OSCAL, Linux
+          Weekend) or standalone"
   - organization: E-mma Balkans
     position: Event manager
+    website: http://www.e-mma.org/
     startDate: 2018-10-21
-    summary: "Event manager for an organization solely focused on inclusion in
-      tech; created from and working with Epitech students and high schoolers"
+    highlights: "Organize events for inclusion in tech; created from and
+      working with Epitech students and high schoolers"
+  - organization: Epitech Innovation Hub
+    startDate: 2019-04-08
+    position: Member
+    highlights: "Organizing and hosting workshops for tools and technology
+      useful for other Epitech students"
   - organization: Other Open Source contributions
     summary: "Translations for the Ethereum project, Nextcloud, etc."
 
