@@ -5,7 +5,7 @@ categories: life
 
 Being decent with only one of the three, I've seen some pretty weird things
 these past two weeks. For one, [SFK] begins today, and I wish I could push this
-post without a proper conection. Second, the Epitech pedagogical staff is
+post without a proper connection. Second, the Epitech pedagogical staff is
 coming and going like spring rains and I have no idea why. The current DPR
 doesn't seem that bad, but we'll see. At the very least, there's a focus on
 maintaining what currently exists, rather than shoving up some random \*.js and
@@ -18,7 +18,7 @@ same issue for seven years straight! How come I never thought about that?
 Sometimes I feel like this is all either a script to look concerned (and I feel
 I've started doing this too) or it falls into the 'small talk' bucket.
 
-Whavever the reason, it seems that almost everyone is happier or less surprised
+Whatever the reason, it seems that almost everyone is happier or less surprised
 when told that the doctor told me it's harmless than when I just tell them the
 same thing without the 'doctor' reference, and based on what information
 I explicitly give, they might as well be a Doctor of Philosophy.
@@ -36,7 +36,7 @@ I've seen this thing happen with social media coverage of events and other
 grassroots advertising, both of which seem more effective when shared by people
 in some kind of relationship (romantic, work, friendship, anything beyond
 'acquaintance'). I think I understand that this happens in order to be a bit
-more efficient by offloading some of the research and fact-checking to our
+more efficient by offloading some of the research and fact checking to our
 peers, yet when everyone does this, there's not much actual checking going on.
 
 Let's hypothesize I share some article somewhere. Looking at the frequency at

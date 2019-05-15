@@ -27,7 +27,7 @@ even though it allows people to just dismiss me with my "technobabble" (*Open
 the installer, click "Next" 5 times and reboot*)
 
 Although I've definitely recommended Google Drive and Dropbox more than once as
-a cloud storage provider, I've done so to people with the techological literacy
+a cloud storage provider, I've done so to people with the technological literacy
 of a 6 year old, and I can prove that a 6 year old can log into an Ubuntu
 session, start their favorite game, open local and Youtube videos and update
 their computer. Fortunately, I have successfully managed to show some of the
