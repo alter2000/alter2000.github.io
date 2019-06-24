@@ -1,0 +1,31 @@
+<script src="/assets/vendor/Chart.bundle.min.js"></script>
+<canvas id="{{ site.data.resume.radar_skills.id }}" height="50" width="50"></canvas>
+<script>
+    var myRadarChart = new Chart(
+      document.getElementById("{{ site.data.resume.radar_skills.id }}");, {
+      type: 'radar',
+      data: {
+        labels: "{{ site.data.resume.radar_skills.aspects }}".split(","),
+        datasets: [{
+            label: "{{ site.data.resume.radar_skills.label }}",
+            backgroundColor: "rgba(179,181,198,0.2)",
+            borderColor: "#3385FF",
+            pointBackgroundColor: "#3385FF",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#3385FF",
+            pointHoverBorderColor: "#3385FF",
+            data: [{{ site.data.resume.radar_skills.percent }}]
+            }]
+      },
+      options: {
+          scale: {
+              responsive: true,
+              ticks: {min: 0, max: 100},
+              lineArc: false,
+              pointLabels: {fontSize: 14},
+          },
+          scaleFontSize: 0,
+          legend: {display: false},
+      }
+    });
+</script>
