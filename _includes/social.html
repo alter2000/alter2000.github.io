@@ -3,7 +3,7 @@
 	{%- if site.external.linkedin -%}
   <li><a href="https://www.linkedin.com/in/{{ site.external.linkedin| cgi_escape | escape }}">
     <svg class="svg-icon">
-      <use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use>
+      <use xlink:href="{{ link '/assets/minima-social-icons.svg#linkedin' }}"></use>
     </svg>
     <span class="username">{{ site.external.linkedin| escape }}</span>
   </a></li>
@@ -13,7 +13,7 @@
 	{%- if mst.username and mst.instance -%}
   <li><a href="https://{{ mst.instance| cgi_escape | escape}}/@{{mst.username}}">
     <svg class="svg-icon">
-      <use xlink:href="{{ '/assets/minima-social-icons.svg#mastodon' | relative_url }}"></use>
+      <use xlink:href="{{ link '/assets/minima-social-icons.svg#mastodon' }}"></use>
     </svg>
     <span class="username">{{ mst.username|escape }}</span>
   </a></li>
@@ -22,7 +22,7 @@
 	{%- if site.external.twitter -%}
   <li><a href="https://www.twitter.com/{{ site.external.twitter| cgi_escape | escape }}">
     <svg class="svg-icon">
-      <use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use>
+      <use xlink:href="{{ link '/assets/minima-social-icons.svg#twitter' }}"></use>
     </svg>
     <span class="username">{{ site.external.twitter| escape }}</span>
   </a></li>
@@ -31,16 +31,16 @@
 	{%- if site.external.youtube -%}
   <li><a href="https://youtube.com/{{ site.external.youtube| cgi_escape | escape }}">
     <svg class="svg-icon">
-      <use xlink:href="{{ '/assets/minima-social-icons.svg#youtube' | relative_url }}"></use>
+      <use xlink:href="{{ link '/assets/minima-social-icons.svg#youtube' }}"></use>
     </svg>
     <span class="username">{{ site.external.youtube| escape }}</span>
   </a></li>
   {%- endif -%}
 
 	{%- if site.rss -%}
-  <li><a href="{{ 'feed.xml' | relative_url }}">
+  <li><a href="{{ link 'feed.xml' }}">
     <svg class="svg-icon">
-      <use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+      <use xlink:href="{{ link '/assets/minima-social-icons.svg#rss' }}"></use>
     </svg>
     <span>{{ site.rss | escape }}</span>
   </a></li>
