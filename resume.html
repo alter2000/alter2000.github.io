@@ -76,7 +76,8 @@ css:
   <section class="item">
     <header>
       {%- if work.company -%}
-        <h3 class="name">{{ work.company }}</h3>
+        <h3 class="name"> {%- if work.website -%} <a href="{{ work.website }}"> {{ work.company }} </a>
+          {%- else -%} {{ work.company }} {%- endif -%}</h3>
       {%- endif -%}
     </header>
     {%- if work.position -%} <span class="position"> {{ work.position }} </span> {%- endif -%}
@@ -87,9 +88,9 @@ css:
     {%- else -%} <span class="endDate"> - Present </span> {%- endif -%}
     {%- endif -%}
 
-    {%- if summary -%} <div class="summary">{{ summary | markdownify }}</div> {%- endif -%}
-    {%- if highlights -%} <ul class="highlights">
-      {%- for hl in highlights -%} <li>{{ hl }}<li> {%- endfor -%}
+    {%- if work.summary -%} <div class="summary">{{ work.summary | markdownify }}</div> {%- endif -%}
+    {%- if work.highlights -%} <ul class="highlights">
+      {%- for hl in work.highlights -%} <li>{{ hl }}</li> {%- endfor -%}
     </ul> {%- endif -%}
   </section>
   {%- endfor -%}

@@ -9,9 +9,9 @@ basics:
   summary: "FOSS enthusiast, tinkerer, translator. Currently freshman
   at Epitech Balkans."
   location:
-    address: Sokrat Miho, Sandy 32B
-    postalCode: '1001'
-    city: Tirana
+    # address: Sokrat Miho, Sandy 32B
+    # postalCode: '1001'
+    # city: Tirana
     countryCode: AL
   profiles:
     - network: github
@@ -31,19 +31,27 @@ basics:
       url: https://www.linkedin.com/in/jorba-sh/
 
 work:
+  - company: Munic
+    position: Intern, DevOps
+    website: https://munic.io
+    startDate: 2019-9-02
+    endDate: 2020-01-03
+    summary: "OBD-2 dongle vendor providing real-time vehicle data,
+              which needs handling by numerous servers in the background."
+    highlights:
+      - 'Research and benchmark currently available cluster managers'
+      - 'Develop safe, parallel update operators for K8s cluster maintenance'
   - company: Totel
-    position: CTO
-    website: https://totel.al (currently down), https:/instagram.com/to.tel
+    position: Cofounder
+    website: https://totel.al
     startDate: 2017-12-01
     endDate: 2018-07-01
-    summary: "Totel was and still is the only e-commerce business in Albania
-              funded only by high schoolers. It was a fun project
-              before university duties came."
+    summary: "The only e-commerce business in Albania funded only by high school sophomores.
+              A fun little project before university rolled in."
     highlights:
-      - 'Create and maintain the company web services:'
-      - Website
-      - Payments
-      - Deliveries
+      - Develop and help design the website
+      - Handle payments
+      - Manage deliveries
 
 volunteer:
   - organization: Open Labs Hackerspace
@@ -123,23 +131,25 @@ skills:
     level: Intermediate
     keywords:
       - Jekyll
-      - Wagtail
       - Flask
+      - Hakyll
+      - Wagtail
 
   - name: Systems Administration
-    level: Intermediate
+    level: Advanced
     keywords:
       - Ansible
-      - LEMP stack
-      - Nextcloud
-      - Package maintainer
+      - Kubernetes
+      - Terraform
 
-  - name: Programming & Scripting Languages
+  - name: Computer Text
     level: Intermediate
     keywords:
-      - Python - intermediate/advanced
-      - POSIX shell scripting - intermediate
-      - C - intermediate/advanced
+      - C
+      - Haskell
+      - Python
+      - POSIX shell
+      - Go
 
 languages:
 
@@ -162,8 +172,10 @@ interests:
       - cycling
       - camping
       - hiking
+      - geocaching
 
   - name: Writing
     keywords:
-      - blogging when possible
+      - blogging
       - documentation
+      - dip pens (handwriting)
