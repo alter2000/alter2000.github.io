@@ -28,6 +28,7 @@ highlighter: rouge
 lsi: true
 excerpt_separator: "\n\n---\n\n"
 incremental: false
+livereload: true
 markdown: kramdown
 safe: true
 plugins:
@@ -58,19 +59,23 @@ collections:
     pandoc: true
 
 include:
-  - .htaccess
   - _pages
-  - assets/resume.css
 
 keep_files:
   - keybase.txt
   - .git
+  - slides/
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
   - tags
+  - gemset.nix
+  - shell.nix
+  - site.hs
+  - .ghci
+  - .cache
 
 defaults:
   - scope:

@@ -4,5 +4,7 @@ links:
     url: /
   - name: About
     url: /about/
-  - name: XP
+  - name: Resume
     url: /resume/
+  - name: XP log
+    url: /cv/
