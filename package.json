@@ -22,6 +22,12 @@
   },
   "homepage": "https://github.com/alter2000/alter2000.github.io#readme",
   "dependencies": {
-    "fomantic-ui": "^2.8.7"
+    "fomantic-ui-less": "^2.8.7",
+    "gulp": "^4.0.2"
+  },
+  "dependenciesMeta": {
+    "fomantic-ui": {
+      "built": false
+    }
   }
 }

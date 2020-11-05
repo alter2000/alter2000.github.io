@@ -202,7 +202,7 @@ css:
   <h2>Interests</h2>
   {%- for inter in rs.interests -%}
   <div class="item">
-    {%- if inter.name -%} <div class="name"> {{ inter.name }} </div> {%- endif -%}
+    {%- if inter.name -%} <div class="name"> {{ inter.name | markdownify }} </div> {%- endif -%}
     {%- if inter.keywords -%} <ul class="keywords">
       {%- for kw in inter.keywords -%} <li>{{ kw }}</li> {%- endfor -%}
     </ul> {%- endif -%}
