@@ -6,8 +6,8 @@ basics:
   email: jor@ineedanew.pw
   phone: "+355-6820-16283"
   website: https://ineedanew.pw
-  summary: "FOSS enthusiast, tinkerer, translator. Currently freshman
-  at Epitech Balkans."
+  summary: "FOSS enthusiast, DevOps engineer, functional programmer.
+  Student at Epitech."
   location:
     # address: Sokrat Miho, Sandy 32B
     # postalCode: '1001'
@@ -30,57 +30,118 @@ basics:
       username: jorba-sh
       url: https://www.linkedin.com/in/jorba-sh/
 
+skills:
+  - name: Systems Administration
+    level: Advanced
+    keywords:
+    - Nix
+    - Kubernetes
+    - Docker
+    - Ansible
+    - Terraform
+    - LXC
+    - CRI-O
+
+  - name: Application Programming
+    level: Intermediate
+    keywords:
+    - C++
+    - Qt
+    - Haskell
+    - Kotlin
+    - Android
+    - Desktop cross-platform
+
+  - name: Systems Programming
+    level: Intermediate
+    keywords:
+    - C
+    - Haskell
+    - Go
+    - C++
+    - POSIX shell/bash
+    - Python
+
+  - name: Backend Web Development
+    level: Intermediate
+    keywords:
+    - Obelisk
+    - Servant
+    - Scotty
+    - Conduit
+
+  - name: Frontend Web Development
+    level: Intermediate
+    keywords:
+    - Purescript
+    - Semantic-UI
+    - Reflex-FRP
+    - Obelisk
+    - React
+    - Jekyll
+
+  - name: Localization
+    level: Intermediate
+    keywords: [ Albanian, English, German ]
+
 work:
-  - company: Munic
-    position: Intern, DevOps
-    website: https://munic.io
-    startDate: 2019-9-02
-    endDate: 2020-01-03
-    summary: "OBD-2 dongle vendor providing real-time vehicle data,
-              which needs handling by numerous servers in the background."
-    highlights:
-      - 'Research and benchmark currently available cluster managers'
-      - 'Develop safe, parallel update operators for K8s cluster maintenance'
-  - company: Totel
-    position: Cofounder
-    website: https://totel.al
-    startDate: 2017-12-01
-    endDate: 2018-07-01
-    summary: "The only e-commerce business in Albania funded only by high school sophomores.
-              A fun little project before university rolled in."
-    highlights:
-      - Develop and help design the website
-      - Handle payments
-      - Manage deliveries
+- company: Munic (Formerly Mobile Devices Ingénierie)
+  position: Intern @infra team
+  website: https://munic.io
+  startDate: 2019-09-02
+  endDate: 2020-01-03
+  highlights:
+  - Researched and benchmarked currently available cluster managers,
+    teaching myself around Kubernetes and cloud infrastructure
+  - Projected and developed a parallel update operator for manager-agnostic
+    cluster maintenance, learning Go and the intricacies, pitfalls and strengths
+    of procedural concurrent programs
+  - Learned how to be productive and healthy in a fully remote environment,
+    striking a balance between individual work sessions, communication and studies
+  keywords: [ Go, Kubernetes, Docker, CRI-O, Pharos ]
+
+- company: Totel
+  position: Cofounder
+  website: https://totel.al
+  startDate: 2017-12-01
+  endDate: 2018-07-01
+  summary: An e-commerce business funded only by high school sophomores.
+    A fun little project before university rolled in, now going strong
+    in a more organic form
+  highlights:
+  - Developed and helped design the store website, teaching myself HTML/CSS
+    and other frontend technologies, and learning about long-term project planning
+  - Built payment handling system utilizing Snipcart, getting to know
+    the Django framework and Semantic-UI, now known as Fomantic
+  - Managed deliveries, learning bit by bit how to manage professional
+    relationships and aiding in delivery coordination
+  keywords: [ Jekyll, Semantic, Wagtail, CRM ]
 
 volunteer:
-  - organization: Open Labs Hackerspace
-    position: Member
-    website: https://openlabs.cc
-    startDate: 2016-05-21
-    summary: "Open Labs, the first hackerspace founded in Albania, is
-      a volunteer organization with a focus on open software, hardware
-      and data and online privacy."
-    highlights:
-      - "Active member of the hackerspace well before a membership system was
-          set up"
-      - "Documentation of most of the infrastructure"
-      - "Main sysadmin, writing Ansible roles for all servers (WIP)"
-      - "Multiple talks and workshops, in conferences/gatherings (OSCAL, Linux
-          Weekend) or standalone"
-  - organization: E-mma Balkans
-    position: Event manager
-    website: http://www.e-mma.org/
-    startDate: 2018-10-21
-    highlights: "Organize events for inclusion in tech; created from and
-      working with Epitech students and high schoolers"
-  - organization: Epitech Innovation Hub
-    startDate: 2019-04-08
-    position: Member
-    highlights: "Organize and host workshops for tools and technology useful
-      for other Epitech students"
-  - organization: Other Open Source contributions
-    summary: "Translations for the Ethereum project, Nextcloud, etc."
+- organization: Open Labs Hackerspace
+  position: Member
+  website: https://openlabs.cc
+  startDate: 2016-05-21
+  summary: Open Labs, the first hackerspace founded in Albania, is
+    a volunteer organization with a focus on open software, hardware
+    and data and online privacy.
+  highlights:
+    - Documented most of the infrastructure as they changed
+    - Multiple talks and workshops, in conferences/gatherings (OSCAL, Linux Weekend) or standalone
+    - Learning more each day about community building, communication and open source project management
+- organization: E-mma Balkans
+  position: Event manager
+  website: http://www.e-mma.org/
+  startDate: 2018-10-21
+  highlights: Organized events for inclusion in tech; created from and
+    working with Epitech students and high schoolers
+- organization: Epitech Innovation Hub
+  startDate: 2019-04-08
+  position: Member
+  highlights: Organize and host workshops for tools, technologies and paradigms
+    useful to other Epitech students and more
+- organization: Other Open Source contributions
+  summary: Translations for the Ethereum project, Nextcloud, etc.
 
 education:
   - institution: Epitech Balkans (BE)
@@ -90,86 +151,51 @@ education:
     endDate: 2018-06-07
 
 projects:
-  - name: "mysh"
-    summary: "Reimplementation of `tcsh` with full functionality and limited
-      use of the standard library"
-    highlights:
-      - C
-      - '<code class="highlighter-rouge">ncurses</code>'
-  - name: "EPyTodo"
-    summary: "A REST API communicating via JSON built on Flask and a \\*SQL
-      wrapper of choice as driver for an ORM"
-    highlights:
-      - Python
-      - MVC
-      - REST
-  - name: "My Web"
-    summary: "A client-server network with a full LEMP/LAMP stack, plus an
-      Ansible playbook to automate the whole project"
-    highlights:
-      - Ansible
-      - Linux/UNIX
-      - Nginx
-      - PostgreSQL/MySQL
-
-skills:
-
-  - name: Localization
-    level: Advanced
-    keywords:
-      - Albanian
-      - English
-      - German
-
-  - name: Web Development
-    level: Intermediate
-    keywords:
-      - Jekyll
-      - Flask
-      - Hakyll
-      - Wagtail
-
-  - name: Systems Administration
-    level: Advanced
-    keywords:
-      - Ansible
-      - Kubernetes
-      - Terraform
-
-  - name: Computer Text
-    level: Intermediate
-    keywords:
-      - C
-      - Haskell
-      - Python
-      - POSIX shell
-      - Go
+- name: mysh
+  summary: "Reimplementation of `tcsh` with full functionality and limited
+    use of the standard library"
+  highlights:
+    - C
+    - '<code class="highlighter-rouge">ncurses</code>'
+- name: EPyTodo
+  summary: "A REST API communicating via JSON built on Flask and a \\*SQL
+    wrapper of choice as driver for an ORM"
+  highlights:
+    - Python
+    - MVC
+    - REST
+- name: My Web
+  summary: "A client-server network with a full LEMP/LAMP stack, plus an
+    Ansible playbook to automate the whole project"
+  highlights:
+    - Ansible
+    - Linux/UNIX
+    - Nginx
+    - PostgreSQL/MySQL
 
 languages:
-
-  - language: Albanian
-    fluency: Native
-
-  - language: English
-    fluency: Near Native (C2)
-
-  - language: German
-    fluency: B1
-
-  - language: French
-    fluency: A2, currently studying
+- { language: Albanian, fluency: Native }
+- { language: English,  fluency: Near Native (C2) }
+- { language: German,   fluency: B1 }
+- { language: French,   fluency: A2, studying }
 
 interests:
+- name: Self-displacement
+  keywords:
+  - cycling
+  - camping
+  - hiking
+  - geocaching
 
-  - name: Outdoors
-    keywords:
-      - cycling
-      - camping
-      - hiking
-      - geocaching
+- name: Mathematics -- kind of
+  keywords:
+  - category theory
+  - lambda calculus
+  - type systems
+  - PL theory
 
-  - name: Writing
-    keywords:
-      - blogging
-      - documentation
-      - dip pens (handwriting)
+- name: Writing
+  keywords:
+  - blogging
+  - documentation
+  - dip pens and fountain pens (easing into calligraphy)
