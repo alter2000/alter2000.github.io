@@ -74,6 +74,9 @@ exclude:
   - gemset.nix
   - shell.nix
   - site.hs
+  - node_modules
+  - package.json
+  - package-lock.json
   - .ghci
   - .cache
 
