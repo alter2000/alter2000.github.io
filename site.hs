@@ -10,17 +10,17 @@ main = hakyllWith config matchRules
 
 matchRules = do
 
-  match ( "assets/*"
-     .||. "CNAME"
-     .||. "css/*"
-     .||. "keybase.txt"
-        ) $ route idRoute >> compile copyFileCompiler
-
-  match "css/*" $ do
+  match "assets/css/*" $ do
     route idRoute
     compile compressCssCompiler
 
-  match "posts/*" $ do
+  match ( "assets/*"
+     .||. "CNAME"
+     -- .||. "css/*"
+     .||. "keybase.txt"
+        ) $ route idRoute *> compile copyFileCompiler
+
+  match "blog/*" $ do
     route $ setExtension "html"
     compile $ pandocCompiler
       >>= loadAndApplyTemplate "templates/post.html"    postCtx
@@ -30,8 +30,8 @@ matchRules = do
   create ["archive.html"] $ do
     route idRoute
     compile $ do
-      posts <- recentFirst =<< loadAll "posts/*"
-      let archiveCtx = listField "posts" postCtx (return posts)
+      posts <- loadAll "posts/*" >>= recentFirst
+      let archiveCtx = listField "posts" postCtx (pure posts)
                     <> constField "title" "Archives"
                     <> defaultContext
       makeItem ""
@@ -43,8 +43,7 @@ matchRules = do
   match "index.html" $ do
     route idRoute
     compile $ do
-      posts <- recentFirst =<< loadAll "posts/*"
-      let indexCtx = listField "posts" postCtx (return posts)
+      let indexCtx = listField "posts" postCtx (loadAll "posts/*" >>= recentFirst)
                   <> constField "title" "Home"
                   <> defaultContext
 
