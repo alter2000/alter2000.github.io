@@ -21,11 +21,11 @@
 			div.column{display: inline-block; vertical-align: top; width: 50%;}
 			q { quotes: "“" "”" "‘" "’"; }
 		</style>
-		<link rel="stylesheet" href="/assets/vendor/reveal-js/css/reveal.css">
-		<link rel="stylesheet" href="/assets/vendor/reveal-js/css/theme/{% if page.theme %}{{ page.theme }}{% else %}black{% endif %}.css">
+		<link rel="stylesheet" href="/assets/vendor/reveal-js/dist/reveal.css">
+		<link rel="stylesheet" href="/assets/vendor/reveal-js/dist/theme/{% if page.theme %}{{ page.theme }}{% else %}black{% endif %}.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="/assets/vendor/reveal-js/lib/css/{% if page.syntax %}{{ page.syntax }}{% else %}zenburn{% endif %}.css">
+		<link rel="stylesheet" href="/assets/vendor/reveal-js/plugin/highlight/{% if page.syntax %}{{ page.syntax }}{% else %}zenburn{% endif %}.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
