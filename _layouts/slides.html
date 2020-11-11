@@ -1,13 +1,18 @@
 ---
 ---
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" {%- if page.dir -%}dir="{{ dir }}"{%- endif -%}>
 	<head>
 		<meta charset="utf-8">
 	{%- for a in author -%}
 		<meta name="author" content="{{ a }}">
 	{%- endfor -%}
+	{%- if page.date -%}
 		<meta name="dcterms.date" content="{{ page.date }}">
+	{%- endif -%}
+	{%- if page.keywords -%}
+	<meta name="keywords" content="{%- for kw in page.keywords -%}{{ kw }}, {%- endfor -%}}">
+	{%- endif -%}
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -21,11 +26,12 @@
 			div.column{display: inline-block; vertical-align: top; width: 50%;}
 			q { quotes: "“" "”" "‘" "’"; }
 		</style>
+		<link rel="stylesheet" href="/assets/vendor/reveal-js/dist/reset.css">
 		<link rel="stylesheet" href="/assets/vendor/reveal-js/dist/reveal.css">
-		<link rel="stylesheet" href="/assets/vendor/reveal-js/dist/theme/{% if page.theme %}{{ page.theme }}{% else %}black{% endif %}.css">
+		<link rel="stylesheet" href="/assets/vendor/reveal-js/dist/theme/{%- if page.theme -%}{{ page.theme }}{%- else -%}black{%- endif -%}.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="/assets/vendor/reveal-js/plugin/highlight/{% if page.syntax %}{{ page.syntax }}{% else %}zenburn{% endif %}.css">
+		<link rel="stylesheet" href="/assets/vendor/reveal-js/plugin/highlight/{%- if page.syntax -%}{{ page.syntax }}{%- else -%}zenburn{%- endif -%}.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -45,154 +51,238 @@
 			</div>
 		</div>
 
-		<script src="/assets/vendor/reveal-js/lib/js/head.min.js"></script>
-		<script src="/assets/vendor/reveal-js/js/reveal.js"></script>
+		<script src="/assets/vendor/reveal-js/dist/reveal.js"></script>
+
+		// reveal.js plugins
+		<script src="/assets/vendor/reveal-js/plugin/notes/notes.js"></script>
+		<script src="/assets/vendor/reveal-js/plugin/search/search.js"></script>
+		<script src="/assets/vendor/reveal-js/plugin/zoom/zoom.js"></script>
+	{%- unless page.mathjax == false -%}
+		<script src="/assets/vendor/reveal-js/plugin/math/math.js"></script>
+	{%- endunless -%}
 
 		<script>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-  {% if page.controls %}
+	{%- if page.controls -%}
 			// Display controls in the bottom right corner
 			controls: {{ page.controls }},
-  {% endif %}
-  {% if page.progress %}
+	{%- endif -%}
+	{%- if page.controlsLayout -%}
+			// Determines where controls appear, "edges" or "bottom-right"
+			controlsLayout: {{ page.controlsLayout }},
+	{%- endif -%}
+	{%- if page.controlsBackArrows -%}
+			// Visibility rule for backwards navigation arrows; "faded", "hidden"
+			// or "visible"
+			controlsBackArrows: {{ page.controlsBackArrows }},
+	{%- endif -%}
+	{%- if page.progress -%}
 			// Display a presentation progress bar
 			progress: {{ page.progress }},
-  {% endif %}
-  {% if page.slide_number %}
+	{%- endif -%}
+	{%- if page.slide_number -%}
 			// Display the page number of the current slide
 			slideNumber: {{ page.slide_number }},
-  {% endif %}
-  {% if page.history %}
+	{%- endif -%}
+	{%- if page.show_slide_number -%}
+			// Display the page number of the current slide
+			showSlideNumber: {{ page.show_slide_number }},
+	{%- else -%}
+			showSlideNumber: 'print',
+	{%- endif -%}
+	{%- if page.hash -%}
+					// Add the current slide number to the URL hash so that reloading the
+					// page/copying the URL will return you to the same slide
+					hash: {{ page.hash }},
+	{%- endif -%}
+	{%- if page.history -%}
 			// Push each slide change to the browser history
 			history: {{ page.history }},
-  {% endif %}
-  {% if page.keyboard %}
+	{%- endif -%}
+	{%- if page.keyboard -%}
 			// Enable keyboard shortcuts for navigation
 			keyboard: {{ page.keyboard }},
-  {% endif %}
-	{% if page.overview %}
+	{%- endif -%}
+	{%- if page.overview -%}
 			// Enable the slide overview mode
 			overview: {{ overview }},
-	{% endif %}
-	{% if page.center %}
+	{%- endif -%}
+	{%- if page.center -%}
 			// Vertical centering of slides
 			center: {{ center }},
-	{% endif %}
-	{% if page.touch %}
+	{%- endif -%}
+	{%- if page.touch -%}
 			// Enables touch navigation on devices with touch input
 			touch: {{ touch }},
-	{% endif %}
-	{% if page.loop %}
+	{%- endif -%}
+	{%- if page.loop -%}
 			// Loop the presentation
 			loop: {{ loop }},
-	{% endif %}
-	{% if page.rtl %}
+	{%- endif -%}
+	{%- if page.rtl -%}
 			// Change the presentation direction to be RTL
 			rtl: {{ rtl }},
-	{% endif %}
-	{% if page.fragments %}
+	{%- endif -%}
+	{%- if page.navigationMode -%}
+			// see https://revealjs.com/vertical-slides/#navigation-mode
+			navigationMode: '{{ page.navigationMode }}',
+	{%- endif -%}
+	{%- if page.shuffle -%}
+			// Randomizes the order of slides each time the presentation loads
+			shuffle: {{ page.shuffle }},
+	{%- endif -%}
+	{%- if page.fragments -%}
 			// Turns fragments on and off globally
 			fragments: {{ fragments }},
-	{% endif %}
-	{% if page.embedded %}
+	{%- endif -%}
+	{%- if page.fragmentInURL -%}
+			// Flags whether to include the current fragment in the URL,
+			// so that reloading brings you to the same fragment position
+			fragmentInURL: {{ page.fragmentInURL }},
+	{%- endif -%}
+	{%- if page.embedded -%}
 			// Flags if page.the presentation is running in an embedded mode,
 			// i.e. contained within a limited portion of the screen
 			embedded: {{ embedded }},
-	{% endif %}
-	{% if page.help %}
+	{%- endif -%}
+	{%- if page.help -%}
 			// Flags if page.we should show a help overlay when the questionmark
 			// key is pressed
 			help: {{ help }},
-	{% endif %}
-	{% if page.showNotes %}
+	{%- endif -%}
+	{%- if page.showNotes -%}
 			// Flags if page.speaker notes should be visible to all viewers
 			showNotes: {{ showNotes }},
-	{% endif %}
-	{% if page.autoSlide %}
+	{%- endif -%}
+	{%- if page.autoPlayMedia -%}
+			// Global override for autoplaying embedded media (video/audio/iframe)
+			// - null: Media will only autoplay if data-autoplay is present
+			// - true: All media will autoplay, regardless of individual setting
+			// - false: No media will autoplay, regardless of individual setting
+			autoPlayMedia: {{ page.autoPlayMedia }},
+	{%- endif -%}
+	{%- if page.preloadIframes -%}
+			// Global override for preloading lazy-loaded iframes
+			// - null: Iframes with data-src AND data-preload will be loaded when within
+			//	 the viewDistance, iframes with only data-src will be loaded when visible
+			// - true: All iframes with data-src will be loaded when within the viewDistance
+			// - false: All iframes with data-src will be loaded only when visible
+			preloadIframes: {{ page.preloadIframes }},
+	{%- endif -%}
+	{%- if page.autoSlide -%}
 			// Number of milliseconds between automatically proceeding to the
 			// next slide, disabled when set to 0, this value can be overwritten
 			// by using a data-autoslide attribute on your slides
 			autoSlide: {{ autoSlide }},
-	{% endif %}
-	{% if page.autoSlideStoppable %}
+	{%- endif -%}
+	{%- if page.autoSlideStoppable -%}
 			// Stop auto-sliding after user input
 			autoSlideStoppable: {{ autoSlideStoppable }},
-	{% endif %}
-	{% if page.mouseWheel %}
+	{%- endif -%}
+	{%- if page.autoSlideMethod -%}
+			// Use this method for navigation when auto-sliding
+			autoSlideMethod: {{ page.autoSlideMethod }},
+	{%- endif -%}
+	{%- if page.defaultTiming -%}
+			// Specify the average time in seconds that you think you will spend
+			// presenting each slide. This is used to show a pacing timer in the
+			// speaker view
+			defaultTiming: {{ page.defaultTiming }},
+	{%- endif -%}
+	{%- if page.totalTime -%}
+			// Specify the total time in seconds that is available to
+			// present.  If this is set to a nonzero value, the pacing
+			// timer will work out the time available for each slide,
+			// instead of using the defaultTiming value
+			totalTime: {{ page.totalTime }},
+	{%- endif -%}
+	{%- if page.minimumTimePerSlide -%}
+			// Specify the minimum amount of time you want to allot to
+			// each slide, if using the totalTime calculation method.  If
+			// the automated time allocation causes slide pacing to fall
+			// below this threshold, then you will see an alert in the
+			// speaker notes window
+			minimumTimePerSlide: {{ page.minimumTimePerSlide }},
+	{%- endif -%}
+	{%- if page.mouseWheel -%}
 			// Enable slide navigation via mouse wheel
 			mouseWheel: {{ mouseWheel }},
-	{% endif %}
-	{% if page.rollingLinks %}
+	{%- endif -%}
+	{%- if page.rollingLinks -%}
 			// Apply a 3D roll to links on hover
 			rollingLinks: {{ rollingLinks }},
-	{% endif %}
-	{% if page.hideAddressBar %}
+	{%- endif -%}
+	{%- if page.hideCursorTime -%}
+			// Time before the cursor is hidden (in ms)
+			hideCursorTime: {{ page.hideCursorTime }},
+	{%- endif -%}
+	{%- if page.hideAddressBar -%}
 			// Hides the address bar on mobile devices
 			hideAddressBar: {{ hideAddressBar }},
-	{% endif %}
-	{% if page.previewLinks %}
+	{%- endif -%}
+	{%- if page.previewLinks -%}
 			// Opens links in an iframe preview overlay
 			previewLinks: {{ previewLinks }},
-	{% endif %}
-	{% if page.transition %}
+	{%- endif -%}
+	{%- if page.transition -%}
 			// Transition style
 			transition: '{{ transition }}', // none/fade/slide/convex/concave/zoom
-	{% endif %}
-	{% if page.transitionSpeed %}
+	{%- endif -%}
+	{%- if page.transitionSpeed -%}
 			// Transition speed
 			transitionSpeed: '{{ transitionSpeed }}', // default/fast/slow
-	{% endif %}
-	{% if page.backgroundTransition %}
+	{%- endif -%}
+	{%- if page.backgroundTransition -%}
 			// Transition style for full page slide backgrounds
 			backgroundTransition: '{{ backgroundTransition }}', // none/fade/slide/convex/concave/zoom
-	{% endif %}
-	{% if page.viewDistance %}
+	{%- endif -%}
+	{%- if page.viewDistance -%}
 			// Number of slides away from the current that are visible
 			viewDistance: {{ viewDistance }},
-	{% endif %}
-	{% if page.parallaxBackgroundImage %}
+	{%- endif -%}
+	{%- if page.parallaxBackgroundImage -%}
 			// Parallax background image
 			parallaxBackgroundImage: '{{ parallaxBackgroundImage }}', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
-	{% elsif background-image %}
+	{%- elsif background-image -%}
 			// Parallax background image
 			parallaxBackgroundImage: '{{ background-image }}', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
-	{% endif %}
-	{% if page.parallaxBackgroundSize %}
+	{%- endif -%}
+	{%- if page.parallaxBackgroundSize -%}
 			// Parallax background size
 			parallaxBackgroundSize: '{{ parallaxBackgroundSize }}', // CSS syntax, e.g. "2100px 900px"
-	{% endif %}
-	{% if page.parallaxBackgroundHorizontal %}
+	{%- endif -%}
+	{%- if page.parallaxBackgroundHorizontal -%}
 			// Amount to move parallax background (horizontal and vertical) on slide change
 			// Number, e.g. 100
 			parallaxBackgroundHorizontal: {{ parallaxBackgroundHorizontal }},
-	{% endif %}
-	{% if page.parallaxBackgroundVertical %}
+	{%- endif -%}
+	{%- if page.parallaxBackgroundVertical -%}
 			parallaxBackgroundVertical: {{ parallaxBackgroundVertical }},
-	{% endif %}
-	{% if page.width %}
+	{%- endif -%}
+	{%- if page.width -%}
 			// The "normal" size of the presentation, aspect ratio will be preserved
 			// when the presentation is scaled to fit different resolutions. Can be
 			// specified using percentage units.
 			width: {{ width }},
-	{% endif %}
-	{% if page.height %}
+	{%- endif -%}
+	{%- if page.height -%}
 			height: {{ height }},
-	{% endif %}
-	{% if page.margin %}
+	{%- endif -%}
+	{%- if page.margin -%}
 			// Factor of the display size that should remain empty around the content
 			margin: {{ margin }},
-	{% endif %}
-	{% if page.minScale %}
+	{%- endif -%}
+	{%- if page.minScale -%}
 			// Bounds for smallest/largest possible scale to apply to content
 			minScale: {{ minScale }},
-	{% endif %}
-	{% if page.maxScale %}
+	{%- endif -%}
+	{%- if page.maxScale -%}
 			maxScale: {{ maxScale }},
-	{% endif %}
-	{% unless page.mathjax == false %}
+	{%- endif -%}
+	{%- unless page.mathjax == false -%}
 			math: {
 				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js',
 				config: 'TeX-AMS_HTML-full',
@@ -209,24 +299,28 @@
 					processClass: 'tex2jax_process'
 				},
 			},
-	{% endunless %}
+	{%- endunless -%}
 			});
 
 			Reveal.initialize({
 				dependencies: [
-				{ src: '/assets/vendor/reveal-js/plugin/markdown/marked.js' },
 				{ src: '/assets/vendor/reveal-js/plugin/markdown/markdown.js' },
 				{ src: '/assets/vendor/reveal-js/plugin/notes/notes.js', async: true },
-				{ src: '/assets/vendor/reveal-js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-	{% if notes_server %}
-				{ src: '/assets/vendor/reveal-js/socket.io/socket.io.js', async: true },
-				{ src: '/assets/vendor/reveal-js/plugin/notes-server/client.js', async: true },
-	{% endif %}
-	{% unless page.mathjax == false %}
-				{ src: '/assets/vendor/reveal-js/plugin/math/math.js', async: true },
-	{% endunless %}
-				]
-			});
+				{ src: '/assets/vendor/reveal-js/plugin/highlight/highlight.js' },
+	{%- if notes_server -%}
+				{ src: '/assets/vendor/reveal-js/socket.io/socket.io.js', async: true }
+	{%- endif -%}
+				],
+				plugins: [
+	{%- unless page.mathjax == false -%}
+				RevealMath,
+	{%- endunless -%}
+	{%- if notes_server -%}
+				RevealNotes,
+	{%- endif -%}
+				RevealSearch,
+				RevealZoom
+			]});
 		</script>
 	</body>
 </html>
