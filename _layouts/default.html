@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+	{%- include head.html -%}
 
-  <body>
-    {%- include sidebar.html -%}
+	<body>
+		{%- include sidebar.html -%}
 
-    <main class="page-content" aria-label="Content">
-    {%- include header.html -%}
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+		<main class="page-content" aria-label="Content">
+		{%- include header.html -%}
+			<div class="wrapper">
+				{{ content }}
+			</div>
+		</main>
 
-    {%- include footer.html -%}
+		{%- include footer.html -%}
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+		<label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-          if(!checkbox.checked || sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
-  </body>
+		<script>
+			((docp) => {
+				var toggle = docp.querySelector('.sidebar-toggle');
+				var sidebar = docp.querySelector('#sidebar');
+				var checkbox = docp.querySelector('#sidebar-checkbox');
+				docp.addEventListener('click', (e) => {
+					var target = e.target;
+					if (!checkbox.checked || sidebar.contains(target) ||
+						 (target === checkbox || target === toggle)) return;
+					checkbox.checked = false;
+				}, false);
+			})(document);
+		</script>
+		<script data-goatcounter="https://alter2000.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+	</body>
 
 </html>

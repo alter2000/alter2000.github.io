@@ -1,19 +1,19 @@
 <footer class="site-footer h-card">
-  <div class="footer-wrapper-wrapper">
-    <h2 class="footer-heading">Links?</h2>
-    <div class="footer-wrapper">
-        <span class="footer-col-main">
-          {%- if site.email -%}
-          <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
-          {%- endif -%}
-          {%- include social.html -%}
-        </span>
-        <span class="footer-col-git">
-          {%- include social-vcs.html -%}
-        </span>
-        <span class="footer-col-desc">
-          {{- site.description | markdownify -}}
-        </span>
-      </div>
-  </div>
+	<div class="footer-wrapper-wrapper">
+		<h2 class="footer-heading">Links?</h2>
+		<div class="footer-wrapper">
+			<span class="footer-col-main">
+			{%- if site.email -%}
+				<a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+			{%- endif -%}
+			{% include social.html %}
+			</span>
+			<span class="footer-col-git">
+				{% include social-vcs.html %}
+			</span>
+			<span class="footer-col-desc">
+				{{- site.description | markdownify -}}
+			</span>
+			</div>
+	</div>
 </footer>
