@@ -4,8 +4,8 @@ let
   jekyll_env = bundlerEnv rec {
     name = "jekyll_env";
     ruby = ruby_2_6;
-    gemfile = ./Gemfile;
-    lockfile = ./Gemfile.lock;
+    gemfile = ../Gemfile;
+    lockfile = ../Gemfile.lock;
     gemset = ./gemset.nix;
   };
 in
