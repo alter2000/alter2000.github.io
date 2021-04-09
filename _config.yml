@@ -55,8 +55,9 @@ strict_filters: true
 strict_variables: true
 
 collections:
-  talks:
-    pandoc: true
+  slides:
+    output: true
+    permalink: /:collection/:name
 
 include:
   - _pages
