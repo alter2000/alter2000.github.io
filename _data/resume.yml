@@ -14,19 +14,19 @@ basics:
     # city: Tirana
     countryCode: AL
   profiles:
-    - network: github
+    - network: Github
       username: alter2000
       url: https://github.com/alter2000
-    - network: gitlab
+    - network: Gitlab
       username: alter2000
       url: https://gitlab.com/alter2000
-    - network: bitbucket
+    - network: Bitbucket
       username: alter2000
       url: https://bitbucket.org/alter2000
     # - network: reddit
     #   username: alter2000
     #   url: https://reddit.com/u/alter2000
-    - network: linkedin
+    - network: LinkedIn
       username: jorba-sh
       url: https://www.linkedin.com/in/jorba-sh/
 
@@ -50,7 +50,6 @@ skills:
     - Haskell
     - Kotlin
     - Android
-    - Desktop cross-platform
 
   - name: Systems Programming
     level: Intermediate
@@ -59,7 +58,7 @@ skills:
     - Haskell
     - Go
     - C++
-    - POSIX shell/bash
+    - POSIX shell/Bash
     - Python
 
   - name: Backend Web Development
@@ -85,11 +84,32 @@ skills:
     keywords: [ Albanian, English, German ]
 
 work:
-- company: Munic (Formerly Mobile Devices Ingénierie)
-  position: Intern @infra team
+- company: Collective68
+  position: Systems Administrator, infrastructure redesign
+  website: https://collective68.tech/
+  startDate: 2020-02
+  endDate: 2020-05
+  summary: Service provider for individuals and businesses focused solely on
+    deploying and maintaining Free and/or open-source software utilizing FOSS
+    in the entire business workflow.
+  highlights:
+  - Practiced recently learned skills around container management and used
+    Ansible for the first time in a business setting, focusing more on
+    upgrading the infrastructure management model and developer experience over
+    addition of newer solutions
+  - Gained useful knowledge on communication with people from different
+    professional backgrounds and transferring only the key concepts during
+    discussions about large changes
+  - Practiced working on a high-stress environment and juggling full-time
+    school and part-time work in a friendly, welcoming and accepting environment
+  keywords: [ Go, Kubernetes, Docker, CRI-O, Pharos ]
+
+- company: Munic (formerly Mobile Devices Ingénierie)
+  position: Intern, infra team
   website: https://munic.io
   startDate: 2019-09-02
   endDate: 2020-01-03
+  summary: Car monitoring and metrics analysis solutions
   highlights:
   - Researched and benchmarked currently available cluster managers,
     teaching myself around Kubernetes and cloud infrastructure
@@ -107,12 +127,12 @@ work:
   endDate: 2018-07-01
   summary: An e-commerce business funded only by high school sophomores.
     A fun little project before university rolled in, now going strong
-    in a more organic form
+    in a more organic form.
   highlights:
   - Developed and helped design the store website, teaching myself HTML/CSS
     and other frontend technologies, and learning about long-term project planning
   - Built payment handling system utilizing Snipcart, getting to know
-    the Django framework and Semantic-UI, now known as Fomantic
+    the Django framework and Semantic-UI
   - Managed deliveries, learning bit by bit how to manage professional
     relationships and aiding in delivery coordination
   keywords: [ Jekyll, Semantic, Wagtail, CRM ]
@@ -126,7 +146,7 @@ volunteer:
     a volunteer organization with a focus on open software, hardware
     and data and online privacy.
   highlights:
-    - Documented most of the infrastructure as they changed
+    - Documented most of the infrastructure (including event-specific services)
     - Multiple talks and workshops, in conferences/gatherings (OSCAL, Linux Weekend) or standalone
     - Learning more each day about community building, communication and open source project management
 - organization: E-mma Balkans
@@ -141,7 +161,9 @@ volunteer:
   highlights: Organize and host workshops for tools, technologies and paradigms
     useful to other Epitech students and more
 - organization: Other Open Source contributions
-  summary: Translations for the Ethereum project, Nextcloud, etc.
+  highlights:
+  - Translations for the Ethereum project, Nextcloud and more
+  - Contributions and cooperation in small projects (HES, `urlscan`)
 
 education:
   - institution: Epitech Balkans (BE)
@@ -150,34 +172,11 @@ education:
     startDate: 2015-09-14
     endDate: 2018-06-07
 
-projects:
-- name: mysh
-  summary: "Reimplementation of `tcsh` with full functionality and limited
-    use of the standard library"
-  highlights:
-    - C
-    - '<code class="highlighter-rouge">ncurses</code>'
-- name: EPyTodo
-  summary: "A REST API communicating via JSON built on Flask and a \\*SQL
-    wrapper of choice as driver for an ORM"
-  highlights:
-    - Python
-    - MVC
-    - REST
-- name: My Web
-  summary: "A client-server network with a full LEMP/LAMP stack, plus an
-    Ansible playbook to automate the whole project"
-  highlights:
-    - Ansible
-    - Linux/UNIX
-    - Nginx
-    - PostgreSQL/MySQL
-
 languages:
-- { language: Albanian, fluency: Native }
-- { language: English,  fluency: Near Native (C2) }
-- { language: German,   fluency: B1 }
-- { language: French,   fluency: A2, studying }
+- { language: Albanian, fluency: Native Speaker }
+- { language: English,  fluency: Near Native }
+- { language: German,   fluency: Fluent }
+- { language: French,   fluency: Intermediate }
 
 interests:
 - name: Self-displacement
@@ -187,7 +186,7 @@ interests:
   - hiking
   - geocaching
 
-- name: Mathematics -- kind of
+- name: Mathematics -- theoretical
   keywords:
   - category theory
   - lambda calculus
@@ -199,3 +198,26 @@ interests:
   - blogging
   - documentation
   - dip pens and fountain pens (easing into calligraphy)
+
+# projects:
+# - name: mysh
+#   summary: "Reimplementation of `tcsh` with full functionality and limited
+#     use of the standard library"
+#   highlights:
+#     - C
+#     - '<code class="highlighter-rouge">ncurses</code>'
+# - name: EPyTodo
+#   summary: "A REST API communicating via JSON built on Flask and a \\*SQL
+#     wrapper of choice as driver for an ORM"
+#   highlights:
+#     - Python
+#     - MVC
+#     - REST
+# - name: My Web
+#   summary: "A client-server network with a full LEMP/LAMP stack, plus an
+#     Ansible playbook to automate the whole project"
+#   highlights:
+#     - Ansible
+#     - Linux/UNIX
+#     - Nginx
+#     - PostgreSQL/MySQL

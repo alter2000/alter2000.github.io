@@ -70,7 +70,7 @@ css:
 {%- endif -%}
 
 {%- if rs.work -%}
-<section class="experience two-col">
+<section class="experience ">
   <h2>Experience</h2>
   {%- for work in rs.work -%}
   <section class="item">
@@ -190,10 +190,18 @@ css:
   <h2>Languages</h2>
   {%- for lang in rs.languages -%}
   <div class="item">
-    {%- if lang.language -%} <div class="language"> {{ lang.language }} </div> {%- endif -%}
-    {%- if lang.fluency -%} <div class="fluency"> <em>{{ lang.fluency }}</em> </div> {%- endif -%}
+		{%- if lang.language -%}
+		<div class="language">
+			{{ lang.language }} {%- if lang.fluency %} &mdash; <em>{{ lang.fluency }}</em>{%- endif -%}
+		</div>
+		{%- endif -%}
+    {%- if lang.fluency -%}
+    <div class="level fluency {{ lang.fluency | downcase }}">
+      <div class="bar"></div>
+    </div>
+    {%- endif -%}
   </div>
-  {%- endfor -%}
+	{%- endfor -%}
 </section>
 {%- endif -%}
 

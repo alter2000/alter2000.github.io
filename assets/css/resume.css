@@ -41,8 +41,8 @@ blockquote {
 /* section / line breaks */
 section {
 	margin: 2em 0;
-	break-inside: avoid;
-	page-break-inside: avoid;
+	/* break-inside: avoid; */
+	/* page-break-inside: avoid; */
 }
 
 section h2 {
@@ -125,6 +125,50 @@ section h2 {
 	.venue { font-size: 0.8em; }
 }
 
+/* language bars */
+.level .bar {
+	border: 1px solid #ddd;
+	display: block;
+	width: 10em;
+	height: 5px;
+	position: relative;
+}
+
+.level .bar::after {
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	background: black;
+	height: 5px;
+}
+
+.level.beginner .bar::after {
+	background: #EB5F51;
+	width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+	background: #ffdf1f;
+	width: 5em;
+}
+
+.level.advanced .bar::after {
+	background: #5CB85C;
+	width: 7.5em;
+}
+
+.level.fluent .bar::after {
+	background: #5CB85C;
+	width: 7.5em;
+}
+
+.level.near.native .bar::after,
+.level.native.speaker .bar::after {
+	background: #59C596;
+	width: 10em;
+}
+
 @media print {
 
 	@page { margin: 0.5in; }
@@ -139,4 +183,11 @@ section h2 {
 		margin: 0.5em;
 	}
 
+	.level em {
+		font-style: normal;
+		padding: .1em 0;
+	}
+	.level .bar {
+		display: none;
+	}
 }
