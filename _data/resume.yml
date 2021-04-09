@@ -163,7 +163,9 @@ volunteer:
 - organization: Other Open Source contributions
   highlights:
   - Translations for the Ethereum project, Nextcloud and more
-  - Contributions and cooperation in small projects (HES, `urlscan`)
+  - Contributions and cooperation in small projects
+    ([HES](https://github.com/fairy-tale-agi-solutions/haskell-editor-setup),
+    [`urlscan`](https://github.com/firecat53/urlscan))
 
 education:
   - institution: Epitech Balkans (BE)

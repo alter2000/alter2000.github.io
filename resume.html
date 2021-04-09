@@ -116,7 +116,7 @@ css:
     {%- if summary -%}<div class="summary"><p>{{ summary }}</p></div>{%- endif -%}
     {%- if vol.highlights -%}
     <ul class="highlights">
-      {%- for hl in vol.highlights -%} <li>{{ hl }}</li> {%- endfor -%}
+      {%- for hl in vol.highlights -%} <li>{{ hl | markdownify }}</li> {%- endfor -%}
     </ul> {%- endif -%}
   </div>
   {%- endfor -%}
@@ -135,7 +135,7 @@ css:
     </header>
     {%- if proj.summary -%}<div class="summary"><p>{{ proj.summary | markdownify }}</p></div>{%- endif -%}
     {%- if proj.highlights -%} <ul class="highlights">
-      {%- for hl in proj.highlights -%} <li>{{ hl }}</li> {%- endfor -%}
+      {%- for hl in proj.highlights -%} <li>{{ hl | markdownify }}</li> {%- endfor -%}
     </ul> {%- endif -%}
   </section>
   {%- endfor -%}
