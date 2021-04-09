@@ -90,7 +90,7 @@ css:
 
     {%- if work.summary -%} <div class="summary">{{ work.summary | markdownify }}</div> {%- endif -%}
     {%- if work.highlights -%} <ul class="highlights">
-      {%- for hl in work.highlights -%} <li>{{ hl }}</li> {%- endfor -%}
+      {%- for hl in work.highlights -%} <li>{{ hl | markdownify }}</li> {%- endfor -%}
     </ul> {%- endif -%}
   </section>
   {%- endfor -%}
