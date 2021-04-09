@@ -91,6 +91,10 @@ section h2 {
 	font-size: 90%;
 }
 
+.highlights p {
+	margin-bottom: 1rem;
+}
+
 .two-col .item {
 	display: inline-block;
 	vertical-align: top;
